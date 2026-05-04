@@ -1,0 +1,39 @@
+{
+  "BLEU": 36.642084026804255,
+  "NIST": 7.338187367484857,
+  "METEOR": 0.6450181458258717,
+  "ROUGE-L": 0.5914794197169053,
+  "CIDEr": 1.9854653437264933,
+  "efficiency": {
+    "trainable_params": 393216,
+    "total_params": 355216384,
+    "trainable_pct": 0.1106975966513977,
+    "train_time_sec": 1862.1539998054504,
+    "peak_gpu_gb": 4.981507584,
+    "samples_per_sec": 95.12102652009756
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw",
+    "lora_rank": 4,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "lora_targets": [
+      "q",
+      "v"
+    ],
+    "max_length": 512,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_steps": 500,
+    "label_smoothing": 0.1,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\lora_webnlg"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "BLEU": 52.319253142942436,
+  "NIST": 8.986255306491826,
+  "METEOR": 0.7327285091981706,
+  "ROUGE-L": 0.6993023014908055,
+  "CIDEr": 2.86209672287041,
+  "efficiency": {
+    "trainable_params": 393216,
+    "total_params": 355216384,
+    "trainable_pct": 0.1106975966513977,
+    "train_time_sec": 1100.1529231071472,
+    "peak_gpu_gb": 7.922560512,
+    "samples_per_sec": 156.06012254650764
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw",
+    "data_version": "v2.1",
+    "lora_rank": 4,
+    "lora_alpha": 32,
+    "lora_dropout": 0.1,
+    "lora_targets": [
+      "q",
+      "v"
+    ],
+    "max_length": 512,
+    "batch_size": 8,
+    "grad_accum": 1,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.01,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_eps": 1e-08,
+    "warmup_steps": 500,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": null,
+    "use_fp16": true,
+    "mask_prompt": false,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\lora_webnlg_v2.1"
+  },
+  "TER": 47.46430094413691,
+  "TER_unit": 0.4746430094413691,
+  "paper_metrics": {
+    "note": "BLEU + Java METEOR (pycocoevalcap, official meteor-1.5.jar) + TER, split by 2017 challenge categories",
+    "seen_categories": [
+      "Airport",
+      "Astronaut",
+      "Building",
+      "City",
+      "ComicsCharacter",
+      "Food",
+      "Monument",
+      "SportsTeam",
+      "University",
+      "WrittenWork"
+    ],
+    "unseen_categories": [
+      "Artist",
+      "Athlete",
+      "CelestialBody",
+      "MeanOfTransportation",
+      "Politician"
+    ],
+    "splits": {
+      "Seen": {
+        "BLEU": 51.172852096092235,
+        "METEOR": 0.3963832123432578,
+        "TER": 0.4905540682847609,
+        "n": 967
+      },
+      "Unseen": {
+        "BLEU": 54.290352518616444,
+        "METEOR": 0.41390120640708716,
+        "TER": 0.44777015437392814,
+        "n": 633
+      },
+      "All": {
+        "BLEU": 52.319253142942436,
+        "METEOR": 0.40280109954237187,
+        "TER": 0.4746430094413691,
+        "n": 1600
+      }
+    }
+  }
+}

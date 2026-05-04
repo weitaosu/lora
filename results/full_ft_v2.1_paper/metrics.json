@@ -1,0 +1,91 @@
+{
+  "mode": "full_ft",
+  "BLEU": 41.304121152794664,
+  "NIST": 7.533048931833894,
+  "METEOR": 0.6059115428081022,
+  "ROUGE-L": 0.5662219219399701,
+  "CIDEr": 2.1502675416312185,
+  "TER": 60.1505677176118,
+  "TER_unit": 0.601505677176118,
+  "efficiency": {
+    "trainable_params": 354824192,
+    "total_params": 354824192,
+    "trainable_pct": 100.0,
+    "train_time_sec": 1200.9589834213257,
+    "train_peak_gpu_gb": 11.127168,
+    "train_throughput_samples_per_sec": 85.22772335522085,
+    "inference_time_sec": 661.5250718593597,
+    "inference_peak_gpu_gb": 5.776388096,
+    "inference_throughput_samples_per_sec": 2.418653605225956
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw",
+    "data_version": "v2.1",
+    "train_seen_only": true,
+    "sep_token": "<|SEP|>",
+    "max_length": 512,
+    "batch_size": 8,
+    "grad_accum": 1,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.01,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_eps": 1e-08,
+    "warmup_steps": 500,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": null,
+    "use_fp16": true,
+    "mask_prompt": false,
+    "grad_checkpointing": false,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\full_ft_v2.1_paper",
+    "save_full_model": false
+  },
+  "paper_metrics": {
+    "note": "BLEU + Java METEOR (pycocoevalcap, official meteor-1.5.jar) + TER, split by 2017 challenge categories",
+    "seen_categories": [
+      "Airport",
+      "Astronaut",
+      "Building",
+      "City",
+      "ComicsCharacter",
+      "Food",
+      "Monument",
+      "SportsTeam",
+      "University",
+      "WrittenWork"
+    ],
+    "unseen_categories": [
+      "Artist",
+      "Athlete",
+      "CelestialBody",
+      "MeanOfTransportation",
+      "Politician"
+    ],
+    "splits": {
+      "Seen": {
+        "BLEU": 56.137222210152345,
+        "METEOR": 0.43345804369997265,
+        "TER": 0.4545719832015936,
+        "n": 967
+      },
+      "Unseen": {
+        "BLEU": 14.035828193876556,
+        "METEOR": 0.17276184316291213,
+        "TER": 0.8498284734133796,
+        "n": 633
+      },
+      "All": {
+        "BLEU": 41.304121152794664,
+        "METEOR": 0.33067361885153224,
+        "TER": 0.601505677176118,
+        "n": 1600
+      }
+    }
+  }
+}

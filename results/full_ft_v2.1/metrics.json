@@ -1,0 +1,86 @@
+{
+  "mode": "full_ft",
+  "BLEU": 50.11283437538998,
+  "NIST": 8.929560842784506,
+  "METEOR": 0.7186758055725677,
+  "ROUGE-L": 0.6239843702309225,
+  "CIDEr": 2.500598944689955,
+  "efficiency": {
+    "trainable_params": 354823168,
+    "total_params": 354823168,
+    "trainable_pct": 100.0,
+    "train_time_sec": 3496.9687299728394,
+    "peak_gpu_gb": 8.104392704,
+    "samples_per_sec": 49.0968073372888
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw",
+    "data_version": "v2.1",
+    "max_length": 512,
+    "batch_size": 4,
+    "grad_accum": 1,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.01,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_eps": 1e-08,
+    "warmup_steps": 500,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": null,
+    "use_fp16": true,
+    "mask_prompt": false,
+    "grad_checkpointing": false,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\full_ft_v2.1",
+    "save_full_model": false
+  },
+  "TER": 54.61885802875054,
+  "TER_unit": 0.5461885802875054,
+  "paper_metrics": {
+    "note": "BLEU + Java METEOR (pycocoevalcap, official meteor-1.5.jar) + TER, split by 2017 challenge categories",
+    "seen_categories": [
+      "Airport",
+      "Astronaut",
+      "Building",
+      "City",
+      "ComicsCharacter",
+      "Food",
+      "Monument",
+      "SportsTeam",
+      "University",
+      "WrittenWork"
+    ],
+    "unseen_categories": [
+      "Artist",
+      "Athlete",
+      "CelestialBody",
+      "MeanOfTransportation",
+      "Politician"
+    ],
+    "splits": {
+      "Seen": {
+        "BLEU": 48.9311971061998,
+        "METEOR": 0.3990693018978132,
+        "TER": 0.5562251798469873,
+        "n": 967
+      },
+      "Unseen": {
+        "BLEU": 52.07937910620543,
+        "METEOR": 0.4095420802505736,
+        "TER": 0.5292452830188682,
+        "n": 633
+      },
+      "All": {
+        "BLEU": 50.11283437538998,
+        "METEOR": 0.4029830626060411,
+        "TER": 0.5461885802875054,
+        "n": 1600
+      }
+    }
+  }
+}

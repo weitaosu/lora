@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Datasets / caches (don't commit raw data; loaders rebuild them)
+data/raw/
+data/processed/
+data/cache/
+data/wb_lora_train/
+data/wb_lora_train_filtered/
+data/wb_lora_train_filtered_v2_captions_backup/
+~/.cache/huggingface/
+
+# Trained checkpoints / large model weights
+models/
+results/**/*.pt
+results/**/*.bin
+results/**/*.safetensors
+results/**/checkpoints/
+
+# Cloned third-party trainer (re-cloned by setup_aitoolkit.py)
+code/wb_lora/flux2/ai-toolkit/
+
+# Logs
+*.log
+results/**/*.log
+wandb/
+
+# Claude Code session metadata (not committed)
+.claude/

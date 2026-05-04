@@ -1,0 +1,38 @@
+{
+  "mode": "full_ft",
+  "BLEU": 18.857645816965444,
+  "NIST": 4.247108885640911,
+  "METEOR": 0.44909429775472803,
+  "ROUGE-L": 0.3846888034450261,
+  "CIDEr": 0.9114087950373666,
+  "efficiency": {
+    "trainable_params": 354823168,
+    "total_params": 354823168,
+    "trainable_pct": 100.0,
+    "train_time_sec": 2416.9762983322144,
+    "peak_gpu_gb": 12.69817856,
+    "samples_per_sec": 73.28578278662683
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw",
+    "max_length": 512,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.01,
+    "warmup_steps": 500,
+    "label_smoothing": 0.1,
+    "grad_clip_norm": null,
+    "use_fp16": true,
+    "mask_prompt": false,
+    "grad_checkpointing": false,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\full_ft",
+    "save_full_model": false
+  }
+}

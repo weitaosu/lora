@@ -1,0 +1,20 @@
+wbronkhorst style, a painting of a lifeguard standing at sunset, dramatic lighting --seed 42 --steps 20
+wbronkhorst style, an oil painting of a surfer riding a large wave, ocean spray --seed 43 --steps 20
+wbronkhorst style, a figure in a red swimsuit standing on a beach, vintage palette --seed 44 --steps 20
+wbronkhorst style, a portrait of a woman in front of a vintage car, painterly skin --seed 45 --steps 20
+wbronkhorst style, a portrait of an astronaut on the moon's surface, oil painting --seed 46 --steps 20
+wbronkhorst style, a knight in armor in a medieval forest, painterly textures --seed 47 --steps 20
+wbronkhorst style, a modern city street at golden hour, painted figures crossing --seed 48 --steps 20
+wbronkhorst style, a chef in a kitchen, dramatic side light, painterly --seed 49 --steps 20
+wbronkhorst style, aerial view of dozens of tiny surfers on a thick blue ocean wave --seed 50 --steps 20
+wbronkhorst style, aerial view of a green golf course with tiny golfers and white sand bunker --seed 51 --steps 20
+wbronkhorst style, aerial view of a snowy mountain ski slope with colorful skiers --seed 52 --steps 20
+wbronkhorst style, a couple sitting on a park bench on a green lawn at golden hour --seed 53 --steps 20
+wbronkhorst style, a person walking a golden retriever across a green field, aerial view --seed 54 --steps 20
+wbronkhorst style, a tennis player serving on a green clay court, crouched stance --seed 55 --steps 20
+wbronkhorst style, a red Formula 1 race car on a winding mountain road, aerial view --seed 56 --steps 20
+wbronkhorst style, two children flying a colorful kite on a grassy hilltop --seed 57 --steps 20
+wbronkhorst style, a swimmer doing breaststroke in a blue swimming pool, aerial view --seed 58 --steps 20
+wbronkhorst style, a fisherman casting a line off a wooden pier at dawn --seed 59 --steps 20
+wbronkhorst style, a couple dancing on a beach at sunset, painterly figures --seed 60 --steps 20
+wbronkhorst style, a librarian reading a book by candlelight in a quiet study --seed 61 --steps 20

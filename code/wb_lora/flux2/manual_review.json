@@ -1,0 +1,1357 @@
+{
+  "bing_Werner_Bronkhorst_Everard_Read__000004.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figure in red swim shorts standing at the edge of a textured blue and white impasto pool, with another figure diving prone leaving a shadow on the white stripe",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "visible white wood frame on all 4 edges"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000008.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thick wood frame + white matte border + signature text"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000011.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting hangs on white wall with frame, lots of wall context"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000012.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny formula one race car on a curved gray asphalt track with red and white kerb under a textured blue sky, distant helicopter overhead",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000019.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, many tiny golfers scattered across thick green impasto fairways with a pale beige sand bunker and lime green putting area",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000022.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, five tiny surfers on colorful boards riding cresting blue impasto waves, aerial view",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000025.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "large white studio background; canvas only ~60% of frame"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "exhibition text overlay on painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000028.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, many tiny surfers scattered across a pale blue impasto ocean, with thick textured brushstrokes forming small waves and breaks",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000030.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "large white studio background visible on right and bottom"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000031.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "real travel photo of camel on sand, not a painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000032.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, five tiny snowboarders and skiers descending a textured white impasto slope, varied colored outfits casting blue shadows",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000033.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin wood frame visible, painting on white wall"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000034.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, many tiny skiers in vibrant colored outfits descending a textured white impasto slope with criss-crossing tracks",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000035.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three tiny surfers on red and orange boards riding cresting waves of thick blue impasto paint, aerial view",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000036.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wrong artist (signature O. Klimenko 2024), not Bronkhorst"
+  },
+  "bing_Werner_Bronkhorst_art__000012.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting on pink wall with record player, lamp, flowers"
+  },
+  "bing_Werner_Bronkhorst_art__000028.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figures running on white diagonal stripes between thick black impasto bars, abstract grid",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000036.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame and white wall visible"
+  },
+  "bing_Werner_Bronkhorst_Everard_Read__000037.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "5 paint blobs hung on white wall, gallery series"
+  },
+  "bing_Werner_Bronkhorst_art__000001.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "white frame + hand visible holding it + wall"
+  },
+  "bing_Werner_Bronkhorst_art__000004.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "marble background, painting on a book/table"
+  },
+  "bing_Werner_Bronkhorst_art__000005.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny formula one race car on a curved gray asphalt track with red and white kerb under a thick blue impasto sky, distant helicopter overhead",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000006.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + Getty watermark + couch with pillows visible"
+  },
+  "bing_Werner_Bronkhorst_art__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame on tan wall with decorative leaves"
+  },
+  "bing_Werner_Bronkhorst_art__000009.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding canvas, white wall background"
+  },
+  "bing_Werner_Bronkhorst_art__000010.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "process shot with brush and hand"
+  },
+  "bing_Werner_Bronkhorst_art__000011.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figure walking a brown dog on a leash across a textured green impasto field, aerial view, casting long shadow",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000013.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figure in white robes leading a brown camel with packs across a sand-colored impasto dune meeting deep red ground",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000014.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three tiny surfers on red boards riding cresting waves of thick blue impasto paint, aerial view",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000016.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculptural paint piece against white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000018.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small impasto smear with heavy white background"
+  },
+  "bing_Werner_Bronkhorst_art__000019.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figures running on white diagonal stripes between thick black impasto bars, abstract grid pattern",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000020.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, many tiny golfers scattered across thick green impasto fairways with a pale beige sand bunker and lime green putting area",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000022.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "heavy white background, painting only ~30% of frame"
+  },
+  "bing_Werner_Bronkhorst_art__000023.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny golfer in orange shirt and white pants putting on textured green impasto fairway, casting long blue shadow",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000024.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hands holding canvas, white wall background"
+  },
+  "bing_Werner_Bronkhorst_art__000021.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, four tiny surfers on red and yellow boards riding cresting waves of thick blue impasto paint, aerial view",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000025.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding white impasto sculpture, white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin white frame visible around painting"
+  },
+  "bing_Werner_Bronkhorst_art__000029.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, figures holding colorful umbrellas walking down diagonal rainbow stripes of thick impasto paint, casting shadows",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000030.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting in gallery vitrine with walls, lighting, architecture"
+  },
+  "bing_Werner_Bronkhorst_art__000031.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figure in red swim shorts standing at the edge of a textured blue and white impasto pool, with another figure diving prone leaving a shadow on the white stripe",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000032.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame on white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000033.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny figures walking between thick vertical black impasto bars on white background, abstract scene",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000034.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting next to bed, pillows, vase \u2014 lifestyle context"
+  },
+  "bing_Werner_Bronkhorst_art__000037.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone sailboat with white sail floating on a deep textured blue ocean with reflection, calm horizon",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000039.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin frame on white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000040.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, single skier in blue jacket and orange gloves carving down a white slope with crossed poles, casting a blue shadow",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000041.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting has text NEED PAPER FOR PORSCHE plus frame and white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000042.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding white impasto sculpture, gray wall"
+  },
+  "bing_Werner_Bronkhorst_art__000043.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, two yoga figures in warrior pose on blue mats on a textured green impasto field, aerial view",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000044.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, abstract green checkered grid of woven impasto squares with a tiny red and white picnic blanket",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000045.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin wood frame on white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000046.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tennis player in white skirt mid-serve on a textured green court, racket held high, casting black shadow",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000047.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible around painting"
+  },
+  "bing_Werner_Bronkhorst_art__000049.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame on white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000051.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, many tiny skiers in colorful outfits descending a textured white impasto slope with criss-crossing tracks",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000053.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible around F1 race painting"
+  },
+  "bing_Werner_Bronkhorst_art__000056.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, abstract green checkered grid of woven impasto squares with a tiny red and white picnic blanket in center",
+    "reason": "pure painting"
+  },
+  "bing_Werner_Bronkhorst_art__000048.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "cream wood frame visible on edges + white wall background"
+  },
+  "bing_Werner_Bronkhorst_art__000050.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, couple holding hands walking across thick green impasto field, long shadows",
+    "reason": "pure full-bleed painting, no frame/wall"
+  },
+  "bing_Werner_Bronkhorst_art__000052.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding canvas + white wall"
+  },
+  "bing_Werner_Bronkhorst_art__000054.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "signature O.Klimenko 2024 \u2014 wrong artist, not Bronkhorst"
+  },
+  "bing_Werner_Bronkhorst_art__000055.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers in bright colored coats descending textured white impasto slope with blue shadows",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000001.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of person walking a dog across thick green impasto, long shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000002.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny red formula one car driving along a winding black road through green impasto fields",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000003.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone tennis player in white serving on textured green impasto court, long shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000004.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, snowboarder mid-jump in orange pants and black jacket against white impasto snow, blue shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000005.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers in colorful coats descending textured white impasto slope",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000006.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of textured green impasto tennis court with yellow net stripe and four tiny players",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "visible white frame on edges"
+  },
+  "bing_Werner_Bronkhorst_artwork__000008.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery/room shot \u2014 bust sculpture, shelves, hallway visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000009.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "living room shot \u2014 curtains, lamp, couch visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000010.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting on wall, gold frame visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000011.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting above couch with pillows \u2014 full living room"
+  },
+  "bing_Werner_Bronkhorst_artwork__000013.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "canvas leaning against wall, floor visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000014.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall background"
+  },
+  "bing_Werner_Bronkhorst_artwork__000015.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery shot above couch + KW watermark"
+  },
+  "bing_Werner_Bronkhorst_artwork__000016.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000017.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "living room shot \u2014 couch + pillows + green wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000019.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + grey couch + wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000020.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "poster with WINTERSWELL text overlay + frame + floor"
+  },
+  "bing_Werner_Bronkhorst_artwork__000021.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "framed canvas leaning against wall on floor"
+  },
+  "bing_Werner_Bronkhorst_artwork__000022.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible + white background"
+  },
+  "bing_Werner_Bronkhorst_artwork__000023.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall + floor visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000024.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery shot above couch with pillows + blue wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000025.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "four framed paintings + couch + table \u2014 full living room"
+  },
+  "bing_Werner_Bronkhorst_artwork__000027.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood paneled wall + plant + frame"
+  },
+  "bing_Werner_Bronkhorst_artwork__000028.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall + plant"
+  },
+  "bing_Werner_Bronkhorst_artwork__000029.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wall + red chair + frame"
+  },
+  "bing_Werner_Bronkhorst_artwork__000030.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + white wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000031.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall + plant"
+  },
+  "bing_Werner_Bronkhorst_artwork__000032.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "black frame + wall + couch"
+  },
+  "bing_Werner_Bronkhorst_artwork__000033.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall, signature looks like different artist"
+  },
+  "bing_Werner_Bronkhorst_artwork__000035.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, four beachgoers walking past blue impasto vertical stripes carrying surfboard, cooler, towels and float ring",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000037.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of textured impasto golf course with green fairway, lighter green and beige sand bunkers and many tiny golfers",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000038.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three tiny surfers in red on thick blue impasto wave folds",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000039.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "canvas in room with plant + carpet + wood floor"
+  },
+  "bing_Werner_Bronkhorst_artwork__000042.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery composition: 9 small framed canvases on white wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000043.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + white wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000044.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + white wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000045.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers in colorful coats descending textured white impasto slope with cross-hatched ski tracks",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000046.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small canvas leaning, white wall around it"
+  },
+  "bing_Werner_Bronkhorst_artwork__000047.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny surfers on a thick blue impasto wave swirl, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000048.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, two figures sitting on a bench on a thick green impasto field, long shadows",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000050.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, woven green basket-weave impasto pattern with tiny red checker picnic blanket at center",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000001.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery shot above couch with pillows"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000002.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "painting on wall, sculpture next to it"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000003.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall + couch visible"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000004.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "red wall + record player + flowers \u2014 full styled room"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000005.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + flatlay tan background with leaves"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000006.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wide wood frame + white wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + hallway wall + door"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000008.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + blue wall + couch with pillows"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000010.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone surfer in red carrying surfboard along edge of thick blue water meeting beige sand impasto",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000011.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + grey wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000012.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall + plant"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000013.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + brick wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000014.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + couch + throw + lamp; also looks AI-generated"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000015.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000002 (F1 car on green/black road)"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000016.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone tan surfer on yellow surfboard riding a vast textured blue impasto sea, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000017.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall, duplicate of artwork__000028"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000018.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + hallway floor + window, looks AI-generated"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000019.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000038"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000020.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding canvas at top + white frame"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000021.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, four tiny surfers on a vast textured blue impasto wave swirl, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000022.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + bed + curtain + candle, AI-generated style"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000023.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "black frame + wall + table with vases"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000024.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + green wall + parquet floor, AI-generated style"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000025.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, close up of beach scene with thick impasto white and pink umbrellas, tiny bathers and shells on cream sand",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "paper poster held by binder clips"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000027.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000035"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000028.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "white frame visible all around"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000029.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "white frame visible"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000030.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, blue gradient impasto seascape with horizontal bands and tiny white sailboats scattered across",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000031.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, swimmer floating on textured blue impasto pool surface with figure in red standing on edge, long blue shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000032.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall + couch + curtains + lamp"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000033.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small canvas on wood table top-down + plant pot"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000034.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall + couch + pillows"
+  },
+  "bing_Werner_Bronkhorst_artwork__000012.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame + wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000018.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "red wall + record player + lamp + flowers, duplicate of beach 004"
+  },
+  "bing_Werner_Bronkhorst_artwork__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall + table + lamp + chair"
+  },
+  "bing_Werner_Bronkhorst_artwork__000034.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wood paneled wall + office chair"
+  },
+  "bing_Werner_Bronkhorst_artwork__000040.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculptural piece + white wall"
+  },
+  "bing_Werner_Bronkhorst_artwork__000051.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, two figures sitting on a wooden bench on textured green impasto field, long shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000052.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small canvas with white wall surrounding"
+  },
+  "bing_Werner_Bronkhorst_artwork__000053.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sculptural race track on bare white wall, mostly empty"
+  },
+  "bing_Werner_Bronkhorst_artwork__000054.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers and sculptural impasto pine trees scattered on white textured snow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000055.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000056.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "O.Klimenko 2024 signature \u2014 wrong artist"
+  },
+  "bing_Werner_Bronkhorst_artwork__000057.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers in colorful coats descending textured white impasto slope with cross-hatched ski tracks",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000058.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny skiers in colorful coats on textured white impasto slope, multiple ski tracks crossing",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_artwork__000059.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible"
+  },
+  "bing_Werner_Bronkhorst_artwork__000060.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000002 (F1 car on green/black road)"
+  },
+  "bing_Werner_Bronkhorst_artwork__000061.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "Eleven11dream watermark \u2014 likely different artist"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000036.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculpture (duplicate of artwork__000040)"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000037.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "pointillist style \u2014 different artist"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000038.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of textured green impasto fields divided into patches with tiny park-goers, dogs, cyclists scattered across",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000039.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of dozens of tiny surfers on colorful boards spread across textured blue impasto ocean",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000040.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three surfers on textured blue impasto wave, two riding orange and black boards, one diving off white board",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000041.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "two hands holding small framed canvas + white wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000042.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of pool lanes divided by thick red and white lane markers with tiny swimmers in each lane",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000043.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of pool with thick red lane markers and three tiny swimmers floating between lanes",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000045.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "close-up of wood frame corner + white wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000046.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible (duplicate of artwork__000055)"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000048.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone sailboat with white sails on vast textured deep blue impasto sea, reflection trailing below",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000050.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three surfers riding light blue impasto wave folds on yellow surfboards",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000051.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculptural blue impasto + white wall"
+  },
+  "bing_Werner_Bronkhorst_beach_painting__000052.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "process shot \u2014 paintbrush, palette, hand visible"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000001.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sketch on white background, mostly empty"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000004.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of textured green impasto park with people walking dogs and golfers, long shadows",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000006.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of green impasto fields divided into patches with tiny park-goers, dogs, sunbathers scattered across",
+    "reason": "full-bleed pure painting (cropped variant of beach 038)"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000008.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 031"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000009.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame visible + duplicate of beach 039"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000010.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000001"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000014.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "process shot \u2014 hand and brush painting tiny figure"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000020.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand + frame, duplicate of beach 020"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000021.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, two figures doing yoga warrior pose on blue mats placed on textured green impasto field",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000022.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, close up macro detail of thick green impasto canvas with white paint stroke crossing through",
+    "reason": "pure paint texture, no contamination"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000023.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000048 / 051 (couple on bench)"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000024.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000038 (surfers on blue swirl)"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin frame visible + white wall"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000028.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hands holding framed canvas + wall"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000029.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of impasto green tennis court with thick cream net stripe across middle and two players",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000031.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000038"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000033.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 039 (aerial blue with surfers)"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000034.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny surfers in colorful boards on textured light blue impasto wave folds",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000035.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible (duplicate of artwork__000059)"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000036.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery installation: multiple sculptural pieces on white wall"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000037.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of dozens of tiny surfers spread across vast textured deep blue impasto ocean",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000038.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "gallery installation on white wall"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000039.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of dozens of tiny surfers on colorful boards spread across textured deep blue impasto ocean",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_exhibition__000040.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "O.Klimenko signature \u2014 wrong artist (duplicate of artwork__000054 wrong-artist version)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000002.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000007 / beach 031"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000005.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + Getty watermark, AI-generated style"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000008.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 020 (hand + frame)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000009.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "white frame visible (duplicate of beach 028)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000010.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000011.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding small canvas + wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000012.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculpture + wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000013.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000002 (F1 car on road)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000014.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000001 (dog walker)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000017.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 037 (pointillist style, different artist)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000018.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hand holding sculpture + wall (duplicate)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000020.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "hands holding framed canvas (duplicate)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000021.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000038"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000023.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 039"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000025.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small canvas leaning on white wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000027.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small canvas on white wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000028.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, rugby player in white jersey number 10 kicking ball on textured green impasto field",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000029.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sketchy small painting, white wall background visible"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000030.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000046 (small canvas leaning, wall visible)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000031.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame corner + wall (duplicate of beach 045)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000032.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sculptural piece on bare white wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000033.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, lone runner in white shirt and blue shorts on textured green impasto field, long shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000034.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "small yellow blob with sketch on bare white background"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000035.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sculptural piece on white wall"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000036.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, aerial view of textured green impasto tennis court with thick cream net stripe across middle and two players in white serving",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000037.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000055 (frame + brushstroke painting)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000038.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny orange McLaren formula one car on winding black road through textured green impasto fields",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000039.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 037"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000040.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000059 (race track with frame)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000041.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, close up of green-clad golfer mid-swing on thick cream impasto green wedge, long shadow",
+    "reason": "full-bleed pure painting"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000043.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of exhibition 006 / beach 038"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000044.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000058 (skiers on white impasto)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000045.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000046.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 028 (rugby player on green)"
+  },
+  "bing_Werner_Bronkhorst_figure_painting__000048.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000059 (race track with frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000002.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of exhibition 037 (aerial surfers on deep blue)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000003.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny surfers riding textured blue impasto wave folds, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000004.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three tiny surfers on a vast textured blue impasto wave swirl, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000005.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 028 (sailboat on blue with frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000006.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 020 (Porsche, hand + frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000007.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 010 (tennis with frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000009.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000007 (diver/swimmer scene)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000010.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 021 (surfers on blue impasto)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000012.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 039 (aerial surfers on blue)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000014.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000002 (F1 car on road)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000015.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, tiny rally car driving along a thick green impasto cursive paint stroke against flat green background",
+    "reason": "full-bleed pure painting"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000016.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 037 (pointillist, different artist)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000018.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 029 (diver with frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000019.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 025 (rainbow stripes on white wall)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000020.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 027 (Abbey Road style on wall)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000021.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 028 (sailboat with white frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000023.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of exhibition 014 (process shot)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000025.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, three tiny surfers on a vast textured blue impasto wave swirl with crashing white foam edges",
+    "reason": "full-bleed pure painting"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000026.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 004 (red wall + record player + flowers)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000028.jpg": {
+    "keep": true,
+    "caption": "wbronkhorst style, dozens of tiny surfers on textured blue impasto wave folds, aerial view",
+    "reason": "full-bleed pure painting"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000029.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "photo of artist sitting in studio with canvases"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000030.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "wood frame visible"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000031.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "sailboat with white frame (duplicate)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000032.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "snowboarders with frame (duplicate of figure 007)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000033.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "thin white frame visible"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000034.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of exhibition 001 (sketch on white)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000035.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 005 (frame + Getty watermark)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000036.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "frame + lamp + cabinet + plant + HoneyVibes signature (wrong artist)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000037.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000047 (surfers on light blue swirl)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000038.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 021 / artwork__000038"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000039.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of beach 021 with thin frame visible"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000040.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 029 (sketchy skier on white)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000041.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 031 (frame corner + wall)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000042.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 033 (runner on green)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000043.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000048 (couple on bench)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000044.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000040 (hand + sculpture)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000045.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000048 (couple on bench)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000046.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of artwork__000059 (race track with frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000047.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of figure 045 (soccer + frame)"
+  },
+  "bing__Werner_Bronkhorst__painting_high_resolu__000048.jpg": {
+    "keep": false,
+    "caption": "",
+    "reason": "duplicate of exhibition 028 (hands holding framed canvas)"
+  }
+}

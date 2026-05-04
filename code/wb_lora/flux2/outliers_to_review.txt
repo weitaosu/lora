@@ -1,0 +1,86 @@
+bing__Werner_Bronkhorst__painting_high_resolu__000023.jpg	image_of_image	wbronkhorst style, a person is painting a green wall with a paintbrush
+bing__Werner_Bronkhorst__painting_high_resolu__000026.jpg	image_of_image	wbronkhorst style, a pink wall with a record player and a painting on the wall
+bing__Werner_Bronkhorst__painting_high_resolu__000030.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing__Werner_Bronkhorst__painting_high_resolu__000032.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing__Werner_Bronkhorst__painting_high_resolu__000033.jpg	image_of_image	wbronkhorst style, blue paint on a wooden frame
+bing__Werner_Bronkhorst__painting_high_resolu__000035.jpg	low_info	wbronkhorst style, skiers on a snowy mountain
+bing__Werner_Bronkhorst__painting_high_resolu__000036.jpg	image_of_image	wbronkhorst style, skiers on the wall in a living room
+bing__Werner_Bronkhorst__painting_high_resolu__000039.jpg	image_of_image	wbronkhorst style, blue waves on a wooden frame
+bing__Werner_Bronkhorst__painting_high_resolu__000041.jpg	low_info	wbronkhorst style, a man flying a kite
+bing__Werner_Bronkhorst__painting_high_resolu__000044.jpg	misclassified	wbronkhorst style, a person holding up a blue piece of rock
+bing__Werner_Bronkhorst__painting_high_resolu__000046.jpg	low_info	wbronkhorst style, a race track
+bing__Werner_Bronkhorst__painting_high_resolu__000047.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_art__000006.jpg	low_info	wbronkhorst style, skiers on a snowy mountain
+bing_Werner_Bronkhorst_art__000010.jpg	image_of_image	wbronkhorst style, a person is painting a green wall with a brush
+bing_Werner_Bronkhorst_art__000012.jpg	image_of_image	wbronkhorst style, a pink wall with a record player and a painting on the wall
+bing_Werner_Bronkhorst_art__000028.jpg	image_of_image	wbronkhorst style, a black and white striped wall with people on it
+bing_Werner_Bronkhorst_art__000036.jpg	image_of_image	wbronkhorst style, a green and white striped painting on a wall
+bing_Werner_Bronkhorst_art__000044.jpg	image_of_image	wbronkhorst style, a green and white checkered wall with a red dot on it
+bing_Werner_Bronkhorst_art__000045.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_art__000047.jpg	low_info	wbronkhorst style, a race track
+bing_Werner_Bronkhorst_art__000049.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_art__000053.jpg	low_info	wbronkhorst style, a race track
+bing_Werner_Bronkhorst_artwork__000005.jpg	low_info	wbronkhorst style, skiers on a white surface
+bing_Werner_Bronkhorst_artwork__000008.jpg	low_info	wbronkhorst style, skiers on a snowy mountain
+bing_Werner_Bronkhorst_artwork__000010.jpg	low_info	wbronkhorst style, skiers
+bing_Werner_Bronkhorst_artwork__000013.jpg	abstract_or_blank	wbronkhorst style, a blue abstract painting on a wooden floor
+bing_Werner_Bronkhorst_artwork__000015.jpg	image_of_image	wbronkhorst style, skiers on the wall in a living room
+bing_Werner_Bronkhorst_artwork__000016.jpg	image_of_image,abstract_or_blank	wbronkhorst style, an abstract painting on a white wall
+bing_Werner_Bronkhorst_artwork__000017.jpg	image_of_image	wbronkhorst style, snow skiers on a wall in a living room
+bing_Werner_Bronkhorst_artwork__000018.jpg	image_of_image	wbronkhorst style, a pink room with a record player and a painting on the wall
+bing_Werner_Bronkhorst_artwork__000019.jpg	image_of_image,abstract_or_blank	wbronkhorst style, an abstract painting on a wall in a living room
+bing_Werner_Bronkhorst_artwork__000021.jpg	image_of_image	wbronkhorst style, a white wall with a picture of skis on it
+bing_Werner_Bronkhorst_artwork__000022.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing_Werner_Bronkhorst_artwork__000023.jpg	image_of_image	wbronkhorst style, a porsche car on a wooden wall
+bing_Werner_Bronkhorst_artwork__000025.jpg	image_of_image	wbronkhorst style, three framed art pieces hang above a couch in a living room
+bing_Werner_Bronkhorst_artwork__000026.jpg	image_of_image,abstract_or_blank	wbronkhorst style, a green abstract painting hangs on the wall in a living room
+bing_Werner_Bronkhorst_artwork__000030.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing_Werner_Bronkhorst_artwork__000031.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing_Werner_Bronkhorst_artwork__000032.jpg	image_of_image,abstract_or_blank	wbronkhorst style, an abstract painting on a wall in a living room
+bing_Werner_Bronkhorst_artwork__000034.jpg	image_of_image	wbronkhorst style, a golf course on a wall in an office
+bing_Werner_Bronkhorst_artwork__000035.jpg	image_of_image	wbronkhorst style, people with surfboards on a blue wall
+bing_Werner_Bronkhorst_artwork__000039.jpg	image_of_image	wbronkhorst style, a green wall with a painting of birds on it
+bing_Werner_Bronkhorst_artwork__000040.jpg	misclassified	wbronkhorst style, a person holding up a blue piece of rock
+bing_Werner_Bronkhorst_artwork__000042.jpg	image_of_image	wbronkhorst style, a set of six gray and white business cards on a white wall
+bing_Werner_Bronkhorst_artwork__000043.jpg	image_of_image	wbronkhorst style, a green and white striped painting on a wall
+bing_Werner_Bronkhorst_artwork__000044.jpg	image_of_image	wbronkhorst style, a green and white striped painting on a wall
+bing_Werner_Bronkhorst_artwork__000045.jpg	image_of_image	wbronkhorst style, a white wall with many small boats on it
+bing_Werner_Bronkhorst_artwork__000055.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_artwork__000057.jpg	low_info	wbronkhorst style, skiers
+bing_Werner_Bronkhorst_artwork__000059.jpg	low_info	wbronkhorst style, a race track
+bing_Werner_Bronkhorst_artwork__000061.jpg	low_info,image_of_image	wbronkhorst style, skiers on a white wall
+bing_Werner_Bronkhorst_beach_painting__000002.jpg	low_info	wbronkhorst style, skiers on a snowy mountain
+bing_Werner_Bronkhorst_beach_painting__000003.jpg	image_of_image,abstract_or_blank	wbronkhorst style, an abstract painting on the wall in a living room
+bing_Werner_Bronkhorst_beach_painting__000004.jpg	image_of_image	wbronkhorst style, a pink wall with a record player and a painting on the wall
+bing_Werner_Bronkhorst_beach_painting__000006.jpg	image_of_image	wbronkhorst style, surfers on the beach in a wooden frame
+bing_Werner_Bronkhorst_beach_painting__000010.jpg	image_of_image	wbronkhorst style, a man standing on top of a blue wall
+bing_Werner_Bronkhorst_beach_painting__000014.jpg	image_of_image	wbronkhorst style, skiers in the snow on a wall
+bing_Werner_Bronkhorst_beach_painting__000022.jpg	image_of_image	wbronkhorst style, skiers in the snow on the wall of a bedroom
+bing_Werner_Bronkhorst_beach_painting__000024.jpg	low_info,image_of_image	wbronkhorst style, green grass on a wall
+bing_Werner_Bronkhorst_beach_painting__000027.jpg	image_of_image	wbronkhorst style, people with surfboards on a blue wall
+bing_Werner_Bronkhorst_beach_painting__000036.jpg	misclassified	wbronkhorst style, a person holding up a blue piece of rock
+bing_Werner_Bronkhorst_beach_painting__000041.jpg	image_of_image	wbronkhorst style, a man holding up a painting of cars on a wall
+bing_Werner_Bronkhorst_beach_painting__000042.jpg	image_of_image	wbronkhorst style, a blue and white striped wall with red and white stripes
+bing_Werner_Bronkhorst_beach_painting__000045.jpg	low_info	wbronkhorst style, a man flying a kite
+bing_Werner_Bronkhorst_beach_painting__000046.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_beach_painting__000052.jpg	image_of_image	wbronkhorst style, a person is painting a green wall with a paintbrush
+bing_Werner_Bronkhorst_Everard_Read__000008.jpg	image_of_image	wbronkhorst style, three people on surfboards in a wooden frame
+bing_Werner_Bronkhorst_Everard_Read__000026.jpg	low_info	wbronkhorst style, golf is art - ween
+bing_Werner_Bronkhorst_Everard_Read__000028.jpg	low_info	wbronkhorst style, surfers on a blue sky
+bing_Werner_Bronkhorst_Everard_Read__000032.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing_Werner_Bronkhorst_Everard_Read__000033.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_Everard_Read__000034.jpg	low_info	wbronkhorst style, skiers
+bing_Werner_Bronkhorst_exhibition__000014.jpg	image_of_image	wbronkhorst style, a person holding a paintbrush and painting on a green wall
+bing_Werner_Bronkhorst_exhibition__000022.jpg	image_of_image	wbronkhorst style, a close up of a green wall with white paint on it
+bing_Werner_Bronkhorst_exhibition__000034.jpg	low_info	wbronkhorst style, surfers on a blue sky
+bing_Werner_Bronkhorst_exhibition__000035.jpg	low_info	wbronkhorst style, a race track
+bing_Werner_Bronkhorst_exhibition__000036.jpg	image_of_image	wbronkhorst style, a group of blue and white painted rocks on a wall
+bing_Werner_Bronkhorst_figure_painting__000005.jpg	low_info	wbronkhorst style, skiers on a snowy mountain
+bing_Werner_Bronkhorst_figure_painting__000007.jpg	low_info	wbronkhorst style, skiers on a snowy slope
+bing_Werner_Bronkhorst_figure_painting__000018.jpg	misclassified	wbronkhorst style, a person holding up a blue piece of rock
+bing_Werner_Bronkhorst_figure_painting__000031.jpg	low_info	wbronkhorst style, a man flying a kite
+bing_Werner_Bronkhorst_figure_painting__000037.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_figure_painting__000039.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_figure_painting__000040.jpg	low_info	wbronkhorst style, a race track
+bing_Werner_Bronkhorst_figure_painting__000045.jpg	image_of_image	wbronkhorst style, green paint on a white wall
+bing_Werner_Bronkhorst_figure_painting__000048.jpg	low_info	wbronkhorst style, a race track

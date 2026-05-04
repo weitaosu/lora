@@ -1,0 +1,94 @@
+job: extension
+config:
+  name: wb_lora_flux2_inference_v3
+  process:
+  - type: sd_trainer
+    training_folder: C:/Users/weita/Desktop/deep_learning/final_proj/results/wb_lora_compare
+    device: cuda:0
+    trigger_word: wbronkhorst style
+    network:
+      type: lora
+      linear: 32
+      linear_alpha: 32
+      pretrained_lora_path: C:/Users/weita/Desktop/deep_learning/final_proj/models/wb_lora_flux2/wb_lora_flux2_klein_9b_v3/wb_lora_flux2_klein_9b_v3.safetensors
+    save:
+      dtype: float16
+      save_every: 999999
+      max_step_saves_to_keep: 1
+      push_to_hub: false
+    datasets:
+    - folder_path: C:/Users/weita/Desktop/deep_learning/final_proj/data/wb_lora_train_filtered
+      caption_ext: txt
+      caption_dropout_rate: 0.05
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      cache_text_embeddings: true
+      buckets: false
+      resolution: 768
+    train:
+      batch_size: 1
+      steps: 1
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0
+      ema_config:
+        use_ema: false
+      dtype: bf16
+    model:
+      arch: flux2_klein_9b
+      name_or_path: black-forest-labs/FLUX.2-klein-base-9B
+      flux2_klein_te_path: Qwen/Qwen3-8B
+      quantize: true
+      quantize_te: true
+      qtype_te: qfloat8
+      low_vram: false
+      layer_offloading: false
+    sample:
+      sampler: flowmatch
+      sample_every: 1
+      width: 1024
+      height: 1024
+      seed: 42
+      walk_seed: false
+      guidance_scale: 4.0
+      sample_steps: 20
+      prompts:
+      - wbronkhorst style, a painting of a lifeguard standing at sunset, dramatic
+        lighting
+      - wbronkhorst style, an oil painting of a surfer riding a large wave, ocean
+        spray
+      - wbronkhorst style, a figure in a red swimsuit standing on a beach, vintage
+        palette
+      - wbronkhorst style, a portrait of a woman in front of a vintage car, painterly
+        skin
+      - wbronkhorst style, a portrait of an astronaut on the moon's surface, oil painting
+      - wbronkhorst style, a knight in armor in a medieval forest, painterly textures
+      - wbronkhorst style, a modern city street at golden hour, painted figures crossing
+      - wbronkhorst style, a chef in a kitchen, dramatic side light, painterly
+      - wbronkhorst style, aerial view of dozens of tiny surfers on a thick blue ocean
+        wave
+      - wbronkhorst style, aerial view of a green golf course with tiny golfers and
+        white sand bunker
+      - wbronkhorst style, aerial view of a snowy mountain ski slope with colorful
+        skiers
+      - wbronkhorst style, a couple sitting on a park bench on a green lawn at golden
+        hour
+      - wbronkhorst style, a person walking a golden retriever across a green field,
+        aerial view
+      - wbronkhorst style, a tennis player serving on a green clay court, crouched
+        stance
+      - wbronkhorst style, a red Formula 1 race car on a winding mountain road, aerial
+        view
+      - wbronkhorst style, two children flying a colorful kite on a grassy hilltop
+      - wbronkhorst style, a swimmer doing breaststroke in a blue swimming pool, aerial
+        view
+      - wbronkhorst style, a fisherman casting a line off a wooden pier at dawn
+      - wbronkhorst style, a couple dancing on a beach at sunset, painterly figures
+      - wbronkhorst style, a librarian reading a book by candlelight in a quiet study
+meta:
+  name: wb_lora_flux2_inference_v3
+  version: '1.0'
