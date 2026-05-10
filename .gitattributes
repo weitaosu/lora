@@ -1,3 +1,5 @@
+results/diffusion_lora/*.png filter=lfs diff=lfs merge=lfs -text
+results/diffusion_lora/showcase_full_quality/*.jpg filter=lfs diff=lfs merge=lfs -text
 *.safetensors filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
