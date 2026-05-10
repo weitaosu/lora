@@ -25,46 +25,55 @@ final_proj/
 ├── README.md              ← this file
 ├── LICENSE                ← MIT
 ├── .gitignore
-├── code/                  ← all implementation
-│   ├── finetune_webnlg_lora.ipynb       primary reproduction (GPT-2 M + LoRA + WebNLG)
-│   ├── finetune_webnlg_fullft.ipynb     full-FT baseline for the comparison table
-│   ├── webnlg_loader.py                 custom WebNLG v3.0 loader (Windows-safe)
-│   ├── reeval_paper.py / reeval_ter.py  metric utilities (Java METEOR, TER)
-│   └── wb_lora/                         extension: LoRA for diffusion-model style transfer
-│       ├── caption_images.py            BLIP auto-captioner (shared)
-│       ├── flux2/                       Flux.2 Klein 9B training pipeline (ai-toolkit-based)
-│       │   ├── README.md                detailed Flux.2 guide
-│       │   ├── wb_lora_flux2.yaml       primary training config
-│       │   ├── train.py                 training launcher
-│       │   ├── compare_*.py             grid generators for the visual comparisons
-│       │   ├── inference_*.yaml         inference configs (one per LoRA version)
-│       │   ├── manual_review.json       77-of-271 hand-curation manifest
-│       │   └── compare_20_prompts.txt   showcase-comparison prompt list
-│       └── README.md                    Stable-Diffusion-1.5 variant guide
+├── code/                                 all implementation
+│   ├── webnlg/                           primary track: GPT-2 M + LoRA on WebNLG
+│   │   ├── finetune_webnlg_lora.ipynb    paper reproduction (rank 4, q+v targets)
+│   │   ├── finetune_webnlg_fullft.ipynb  full-FT baseline for comparison
+│   │   ├── webnlg_loader.py              custom WebNLG v3.0 / v2.1 loader (Windows-safe)
+│   │   └── reeval_paper.py / reeval_ter.py   metric utilities (Java METEOR, TER)
+│   └── diffusion_lora/                   extension: LoRA on Flux.2 Klein 9B for style transfer
+│       ├── caption_images.py             BLIP auto-captioner (shared)
+│       ├── README.md                     Stable-Diffusion-1.5 variant guide
+│       └── flux2/                        Flux.2 Klein 9B training pipeline (ai-toolkit-based)
+│           ├── README.md                 detailed Flux.2 guide
+│           ├── flux2.yaml        primary training config
+│           ├── train.py                  training launcher
+│           ├── compare_*.py              grid generators for the visual comparisons
+│           ├── inference_*.yaml          inference configs (one per LoRA version)
+│           ├── manual_review.json        77-of-271 hand-curation manifest
+│           └── compare_20_prompts.txt    showcase-comparison prompt list
 ├── data/
-│   ├── README.md                        WebNLG download instructions
-│   ├── raw/                             [gitignored] WebNLG v3.0 corpus (~25 MB on disk)
-│   └── wb_lora_train_filtered/          [gitignored] 77 hand-curated Bronkhorst paintings + captions
+│   ├── README.md                         download instructions for both datasets
+│   ├── webnlg/raw/                       [gitignored] WebNLG v3.0 corpus (~25 MB on disk)
+│   └── diffusion_lora/                   [gitignored] Bronkhorst training images
+│       ├── train/                        scraped 271 raw paintings
+│       ├── train_filtered/               77 manually-curated paintings + hand-written captions
+│       └── train_filtered_v2_captions_backup/   v2-era captions kept for reference
 ├── results/
-│   ├── README.md                        result-folder layout
-│   ├── lora_webnlg_v2.1_paper/          primary reproduction (paper-exact recipe)
-│   ├── full_ft_v2.1_paper/              full-FT baseline run
-│   └── wb_lora_compare/                 WB-LoRA extension grids + showcase images
-├── models/                              [gitignored] trained checkpoints (LoRA + base)
-├── poster/poster.pdf                    in-class poster
+│   ├── README.md                         result-folder layout
+│   ├── webnlg/                           primary-track reproduction outputs
+│   │   ├── lora_webnlg_v2.1_paper/       paper-exact LoRA recipe (headline result)
+│   │   ├── full_ft_v2.1_paper/           full-FT baseline run
+│   │   └── charts/                       aggregate plots
+│   └── diffusion_lora/                   extension-track grids + 22-image showcase
+│       ├── flux2_*.png                   comparison/curated grids (v1, v2, v3, 3-way)
+│       ├── showcase_full_quality/        22 hand-picked baseline-vs-LoRA pairs (full-res)
+│       └── inference_{baseline,v1,v2,v3}/   raw 20-prompt sample sets per LoRA version
+├── models/                               [gitignored] trained checkpoints (LoRA + base)
+├── poster/poster.pdf                     in-class poster
 └── report/
-    ├── report.pdf                       final report
-    └── CS4782 Project Proposal.pdf      original proposal (for reference)
+    ├── report.pdf                        final report
+    └── CS4782 Project Proposal.pdf       original proposal (for reference)
 ```
 
 ## 4. Re-implementation Details
 
 **Primary track — GPT-2 M + WebNLG (the paper's recipe).**
 - Base model: `gpt2-medium` (354 M params, HuggingFace).
-- Dataset: WebNLG v3.0 English (~13 K train / 1.7 K dev / 3.9 K test). Custom loader (`code/webnlg_loader.py`) bypasses HF datasets' deprecated script-loader path and Windows MAX_PATH issues.
+- Dataset: WebNLG v3.0 English (~13 K train / 1.7 K dev / 3.9 K test). Custom loader (`code/webnlg/webnlg_loader.py`) bypasses HF datasets' deprecated script-loader path and Windows MAX_PATH issues.
 - LoRA injected into `q_proj`, `v_proj` of every transformer block; rank `r=4`, alpha `α=8`. Trainable params: **0.35 M / 354 M = 0.10 %** (matches the paper's claim).
 - Training: 5 epochs, AdamW lr 2e-4, batch 8, fp16. Inference: beam search (beam=5, no-repeat-ngram=3).
-- Metrics: BLEU (sacrebleu, official paper protocol), METEOR (Java jar from cs.cmu.edu, paper protocol), ROUGE-L, NIST, CIDEr (pycocoevalcap), TER. Re-evaluation utilities in `code/reeval_paper.py` and `code/reeval_ter.py`.
+- Metrics: BLEU (sacrebleu, official paper protocol), METEOR (Java jar from cs.cmu.edu, paper protocol), ROUGE-L, NIST, CIDEr (pycocoevalcap), TER. Re-evaluation utilities in `code/webnlg/reeval_paper.py` and `code/webnlg/reeval_ter.py`.
 - Ablations: rank ∈ {2, 4, 8, 16, 32}, targets ∈ {q+v, q+k+v+o}, plus a full-FT baseline.
 
 **Extension — WB LoRA on Flux.2 Klein 9B (ai-toolkit).**
@@ -85,22 +94,22 @@ final_proj/
 pip install torch transformers datasets accelerate
 pip install sacrebleu nltk rouge-score pycocoevalcap tqdm
 python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('punkt')"
-jupyter lab code/finetune_webnlg_lora.ipynb     # run all cells; switch ablations via the CFG cell
+jupyter lab code/webnlg/finetune_webnlg_lora.ipynb     # run all cells; switch ablations via the CFG cell
 ```
 
-The notebook handles WebNLG download, training, generation, and metric reporting. Outputs land in `results/lora_webnlg_v2.1_paper/`.
+The notebook handles WebNLG download, training, generation, and metric reporting. Outputs land in `results/webnlg/lora_webnlg_v2.1_paper/`.
 
 **Extension — WB LoRA on Flux.2 (~3 h on a 4090):**
 
 ```bash
-cd code/wb_lora/flux2
+cd code/diffusion_lora/flux2
 python setup_aitoolkit.py                       # one-time: clone + install ai-toolkit
 huggingface-cli login                           # gated weights for Flux.2 Klein + Qwen3
-python ai-toolkit/run.py wb_lora_flux2.yaml     # full v3 training (~2.5 h)
+python ai-toolkit/run.py flux2.yaml     # full v3 training (~2.5 h)
 python compare_showcase.py                      # build the curated baseline-vs-LoRA grid
 ```
 
-Detailed instructions in [code/wb_lora/flux2/README.md](code/wb_lora/flux2/README.md).
+Detailed instructions in [code/diffusion_lora/flux2/README.md](code/diffusion_lora/flux2/README.md).
 
 ## 6. Results / Insights
 
@@ -113,9 +122,9 @@ Detailed instructions in [code/wb_lora/flux2/README.md](code/wb_lora/flux2/READM
 | METEOR          | 0.42 | 0.39 | 0.42 | 0.39 |
 | TER ↓           | 0.40 | 0.51 | 0.40 | 0.51 |
 
-Numbers in the "Our" columns are within reproduction tolerance for our v3.0 dataset version; the paper used a slightly different split. **Key insight reproduced**: LoRA at 0.1 % trainable params **matches** full fine-tuning, matching the paper's headline efficiency claim. See `results/lora_webnlg_v2.1_paper/metrics.json` and `results/full_ft_v2.1_paper/metrics.json` for full per-metric tables.
+Numbers in the "Our" columns are within reproduction tolerance for our v3.0 dataset version; the paper used a slightly different split. **Key insight reproduced**: LoRA at 0.1 % trainable params **matches** full fine-tuning, matching the paper's headline efficiency claim. See `results/webnlg/lora_webnlg_v2.1_paper/metrics.json` and `results/webnlg/full_ft_v2.1_paper/metrics.json` for full per-metric tables.
 
-**Extension — WB LoRA on Flux.2.** The same low-rank insight transfers cleanly to a 9B diffusion transformer: rank 32 (~1.8 % of base params) produces strong, controllable style transfer that's gated by the trigger word `wbronkhorst style`. Visual headline: 22 baseline-vs-LoRA pairs in [results/wb_lora_compare/showcase_full_quality/](results/wb_lora_compare/showcase_full_quality/), summary grid in [results/wb_lora_compare/flux2_showcase_baseline_vs_lora.png](results/wb_lora_compare/flux2_showcase_baseline_vs_lora.png).
+**Extension — WB LoRA on Flux.2.** The same low-rank insight transfers cleanly to a 9B diffusion transformer: rank 32 (~1.8 % of base params) produces strong, controllable style transfer that's gated by the trigger word `wbronkhorst style`. Visual headline: 22 baseline-vs-LoRA pairs in [results/diffusion_lora/showcase_full_quality/](results/diffusion_lora/showcase_full_quality/), summary grid in [results/diffusion_lora/flux2_showcase_baseline_vs_lora.png](results/diffusion_lora/flux2_showcase_baseline_vs_lora.png).
 
 ## 7. Conclusion
 

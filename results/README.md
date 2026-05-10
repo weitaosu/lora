@@ -4,7 +4,7 @@ Two tracks share this folder.
 
 ## Primary track — WebNLG GPT-2 Medium reproduction
 
-Each run writes to its own subfolder. Contents per run:
+All WebNLG runs live under `results/webnlg/`. Each run writes to its own subfolder. Contents per run:
 
 - `lora_adapter.pt` — saved LoRA parameters (small, ~5 MB) [gitignored]
 - `train_log.json` — per-step and per-epoch losses
@@ -13,18 +13,18 @@ Each run writes to its own subfolder. Contents per run:
 
 | Folder | What it is |
 |---|---|
-| `lora_webnlg/` | default exploratory run (r=4, q+v) |
-| `lora_webnlg_v2.1/` | v2.1 dataset variant |
-| `lora_webnlg_v2.1_paper/` | **paper-exact recipe** — the headline reproduction |
-| `full_ft/` | full fine-tuning baseline (exploratory) |
-| `full_ft_v2.1/`, `full_ft_v2.1_paper/` | full-FT comparison runs |
-| `charts/` | aggregate plots (BLEU/METEOR vs rank, etc.) |
+| `results/webnlg/lora_webnlg/` | default exploratory run (r=4, q+v) |
+| `results/webnlg/lora_webnlg_v2.1/` | v2.1 dataset variant |
+| `results/webnlg/lora_webnlg_v2.1_paper/` | **paper-exact recipe** — the headline reproduction |
+| `results/webnlg/full_ft/` | full fine-tuning baseline (exploratory) |
+| `results/webnlg/full_ft_v2.1/`, `results/webnlg/full_ft_v2.1_paper/` | full-FT comparison runs |
+| `results/webnlg/charts/` | aggregate plots (BLEU/METEOR vs rank, etc.) and the `_make_*_chart.py` scripts that generate them |
 
-To switch ablations, edit the `CFG['out_dir']` cell at the top of [code/finetune_webnlg_lora.ipynb](../code/finetune_webnlg_lora.ipynb).
+To switch ablations, edit the `CFG['out_dir']` cell at the top of [code/webnlg/finetune_webnlg_lora.ipynb](../code/webnlg/finetune_webnlg_lora.ipynb).
 
 ## Extension track — WB LoRA on Flux.2 Klein 9B
 
-`wb_lora_compare/` holds visual deliverables for the diffusion-model extension:
+`results/diffusion_lora/` holds visual deliverables for the diffusion-model extension:
 
 | File | What it shows |
 |---|---|
@@ -37,4 +37,4 @@ To switch ablations, edit the `CFG['out_dir']` cell at the top of [code/finetune
 | `flux2_showcase_baseline_vs_lora.png` | **curated final showcase** — 11 picks, baseline-vs-LoRA, horizontal 2-row |
 | `showcase_full_quality/` | the same 11 picks as 22 individual full-resolution 1024×1024 JPGs |
 
-The training-time per-step samples themselves live in `models/wb_lora_flux2/<run-name>/samples/` (gitignored — too large to commit).
+The training-time per-step samples themselves live in `models/diffusion_lora/<run-name>/samples/` (gitignored — too large to commit).

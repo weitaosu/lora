@@ -1,0 +1,107 @@
+---
+# ai-toolkit config: Werner Bronkhorst LoRA on Flux.2 Klein 9B.
+# Run with:  python <ai-toolkit>/run.py flux2.yaml
+#
+# Tuned for RTX 4090 (24 GB VRAM, 96 GB system RAM).
+# Architecture: Flux.2 Klein 9B + Qwen3-8B text encoder + Flux2 VAE.
+#
+# IMPORTANT: ai-toolkit downloads bf16 originals from HuggingFace on first run.
+# Your existing fp8 .safetensors files (in models/diffusion_model/) are NOT
+# used here — those are for ComfyUI inference. Training uses bf16 weights from HF.
+# Total one-time download: ~30 GB (Qwen3-8B ~16 GB + Flux.2 Klein 9B ~18 GB).
+# Make sure your HF_HOME has space and you've run `huggingface-cli login`.
+
+job: extension
+config:
+  name: "klein_9b_v3"  # v3: separate dir; v1 + v2 outputs preserved for A/B
+
+  process:
+    - type: "sd_trainer"
+      training_folder: "C:/Users/weita/Desktop/deep_learning/final_proj/models/diffusion_lora"
+      device: "cuda:0"
+      trigger_word: "wbronkhorst style"
+
+      # ----- LoRA network -----
+      network:
+        type: "lora"
+        linear: 32          # v3: dropped 64→32. v2 (rank 64) over-stylized & lost subject fidelity (chef lost kitchen, etc.). Match v1's rank for fair data-vs-data comparison
+        linear_alpha: 32    # alpha = rank (1.0 effective scale)
+
+      # ----- Saving -----
+      save:
+        dtype: "float16"
+        save_every: 250
+        max_step_saves_to_keep: 25           # v3: positive int! keep ALL 12 step-checkpoints + final. NOT -1 (which deletes everything in ai-toolkit)
+        push_to_hub: false
+
+      # ----- Dataset (sidecar .txt captions) -----
+      # Optimizations (validated by smoke v5 → 1.1s/step at 512px on a 4090):
+      #   - buckets: false      → single bucket, no per-aspect CUDA recompile
+      #   - cache_latents       → VAE latents cached once, VAE unloaded
+      #   - cache_text_embeddings → Qwen3 outputs cached once, Qwen3 unloaded (~8 GB freed)
+      datasets:
+        - folder_path: "C:/Users/weita/Desktop/deep_learning/final_proj/data/diffusion_lora/train_filtered"  # v2: 77 manually-curated full-bleed paintings + hand-written captions
+          caption_ext: "txt"
+          caption_dropout_rate: 0.05         # 5% of steps drop caption (regularizes)
+          shuffle_tokens: false
+          cache_latents_to_disk: true
+          cache_text_embeddings: true        # MAJOR speedup: 245× faster (validated)
+          buckets: false                     # MAJOR speedup: single bucket, no recompile
+          resolution: 768                    # v2: kept at 768. Median native short-side is 850; only 36/77 are ≥1024, so 1024 would upscale 41 imgs and teach the model to invent detail
+
+      # ----- Training -----
+      train:
+        batch_size: 1
+        steps: 5000                          # v3 (extended): user requested 5000 mid-run. Will be a 3000+continuation pattern: current process finishes at 3000, then restart same yaml with this value -> resumes from step 3000 checkpoint and trains 2000 more
+        gradient_accumulation_steps: 1
+        train_unet: true
+        train_text_encoder: false            # don't fine-tune Qwen3 — too expensive, rarely helps
+        gradient_checkpointing: true
+        noise_scheduler: "flowmatch"
+        optimizer: "adamw8bit"
+        lr: 1e-4
+        ema_config:
+          use_ema: true
+          ema_decay: 0.99
+        dtype: "bf16"
+
+      # ----- Model: Flux.2 Klein BASE 9B (bf16 download from HF) -----
+      model:
+        # arch from extensions_built_in/diffusion_models/flux2/flux2_klein_model.py
+        arch: "flux2_klein_9b"
+        # ai-toolkit downloads bf16 originals from this HF repo and re-quantizes
+        # to fp8 (quanto) in-VRAM. The user's local fp8 file (different format)
+        # is reserved for ComfyUI inference, not training.
+        name_or_path: "black-forest-labs/FLUX.2-klein-base-9B"
+        flux2_klein_te_path: "Qwen/Qwen3-8B"
+        quantize: true                       # quanto qfloat8 quantization at load
+        quantize_te: true                    # quantize Qwen3 TE2 too
+        qtype_te: "qfloat8"
+        low_vram: false                      # 4090 has plenty
+        layer_offloading: false
+
+      # ----- Sampling: baseline (step 0) + every 250 steps + final -----
+      # The trigger word `wbronkhorst style` appears in every prompt; at step 0
+      # the LoRA is uninitialised so this is effectively the baseline.
+      sample:
+        sampler: "flowmatch"
+        sample_every: 500                    # v3: less frequent sampling (saves are still every 250). Trims sampling time from ~150min to ~50min. Per-checkpoint samples can still be regenerated from saved LoRAs later
+        width: 1024
+        height: 1024
+        seed: 42
+        walk_seed: false                     # same seed every sample run -> direct comparison
+        guidance_scale: 4.0
+        sample_steps: 28
+        prompts:
+          - "wbronkhorst style, a painting of a lifeguard standing at sunset, dramatic lighting"
+          - "wbronkhorst style, an oil painting of a surfer riding a large wave, ocean spray"
+          - "wbronkhorst style, a figure in a red swimsuit standing on a beach, vintage palette"
+          - "wbronkhorst style, a portrait of a woman in front of a vintage car, painterly skin"
+          - "wbronkhorst style, a portrait of an astronaut on the moon's surface, oil painting"
+          - "wbronkhorst style, a knight in armor in a medieval forest, painterly textures"
+          - "wbronkhorst style, a modern city street at golden hour, painted figures crossing"
+          - "wbronkhorst style, a chef in a kitchen, dramatic side light, painterly"
+
+meta:
+  name: "[name]"
+  version: '1.0'

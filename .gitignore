@@ -36,6 +36,9 @@ results/**/checkpoints/
 # Cloned third-party trainer (re-cloned by setup_aitoolkit.py)
 code/wb_lora/flux2/ai-toolkit/
 
+# Personal scratch / archived notebooks
+code/archive/
+
 # Logs
 *.log
 results/**/*.log
