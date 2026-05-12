@@ -1,143 +1,123 @@
-# LoRA: Reproduction on WebNLG + Style-Transfer Extension on Flux.2
-
-CS 4782 (Cornell, Spring 2026) final-project re-implementation of **LoRA: Low-Rank Adaptation of Large Language Models** ([Hu et al., 2021](https://arxiv.org/abs/2106.09685)).
-
-**Authors:** Kevin Tang (qt58) · Madur Malliah (mr2466) · Weitao Su (ws535)
-
----
+# LoRA: Low-Rank Adaptation Reimplementation
 
 ## 1. Introduction
 
-This repo re-implements LoRA — a parameter-efficient fine-tuning method that freezes the pretrained weights `W` and learns a low-rank update `ΔW = (α/r)·B·A` injected into the attention/MLP linear layers. The paper's core contribution is showing that this rank-`r` adapter (with `r` as small as 4) **matches full fine-tuning quality at <0.1% of the trainable parameters**, with no inference-time overhead.
+This repository contains our reimplementation of **LoRA: Low-Rank Adaptation of Large Language Models** (Hu et al., 2021) for CS 4782 (Spring 2026). LoRA's core contribution is freezing the pretrained weight matrix `W` and learning a low-rank update `ΔW = BA` (with `A ∈ ℝ^{r×d}`, `B ∈ ℝ^{d×r}`, `r ≪ d`), which dramatically reduces trainable parameters and GPU memory while matching full fine-tuning performance.
 
-We reproduce LoRA's **GPT-2 Medium on WebNLG E2E generation** result (paper Table 4), and run a **research extension** that applies the same LoRA recipe to a 9-billion-parameter diffusion transformer (Flux.2 Klein 9B) for visual style learning, demonstrating LoRA's transferability beyond the language-modeling regime studied in the original paper.
+We reproduce the paper's natural language generation (NLG) results on GPT-2 Medium across three datasets, then extend the low-rank insight to a 9B-parameter diffusion transformer to test whether it generalizes beyond autoregressive LLMs.
 
 ## 2. Chosen Result
 
-**Paper Table 4** — GPT-2 Medium fine-tuned on WebNLG, reporting BLEU / METEOR / TER. The paper reports that LoRA at rank 4 (applied to `q_proj`, `v_proj`) achieves BLEU ≈ 55.5 / METEOR ≈ 0.42 / TER ≈ 0.40 — on par with full fine-tuning while training only **0.35 M of GPT-2 M's 354 M params (~0.1%)**. This is the headline efficiency claim of the paper.
+We reproduce the **NLG results on GPT-2 Medium** from the LoRA paper (Tables 2–4 in Hu et al., 2021), covering:
 
-We reproduce this exact recipe (rank 4, q+v targets, 5 epochs, beam search) and additionally run the **WB-LoRA-on-Flux.2** extension to test whether the same low-rank insight transfers to a denoising-transformer architecture trained on a 77-image custom dataset.
+- **E2E NLG Challenge** (Novikova et al., 2017) - BLEU, NIST, METEOR, ROUGE-L, CIDEr
+- **DART** (Nan et al., 2020) - BLEU, METEOR, TER
+- **WebNLG** (Gardent et al., 2017) - BLEU, METEOR, TER (Seen / Unseen / All)
+
+Plus a **rank ablation** (Fig. 6 in the paper) showing diminishing returns past rank 4. These results are central to the paper's claim that low-rank adaptation matches full fine-tuning at a fraction of the trainable parameters and GPU memory.
 
 ## 3. GitHub Contents
 
 ```
-final_proj/
-├── README.md              ← this file
-├── LICENSE                ← MIT
-├── .gitignore
-├── code/                                 all implementation
-│   ├── webnlg/                           primary track: GPT-2 M + LoRA on WebNLG
-│   │   ├── finetune_webnlg_lora.ipynb    paper reproduction (rank 4, q+v targets)
-│   │   ├── finetune_webnlg_fullft.ipynb  full-FT baseline for comparison
-│   │   ├── webnlg_loader.py              custom WebNLG v3.0 / v2.1 loader (Windows-safe)
-│   │   └── reeval_paper.py / reeval_ter.py   metric utilities (Java METEOR, TER)
-│   └── diffusion_lora/                   extension: LoRA on Flux.2 Klein 9B for style transfer
-│       ├── caption_images.py             BLIP auto-captioner (shared)
-│       ├── README.md                     Stable-Diffusion-1.5 variant guide
-│       └── flux2/                        Flux.2 Klein 9B training pipeline (ai-toolkit-based)
-│           ├── README.md                 detailed Flux.2 guide
-│           ├── flux2.yaml        primary training config
-│           ├── train.py                  training launcher
-│           ├── compare_*.py              grid generators for the visual comparisons
-│           ├── inference_*.yaml          inference configs (one per LoRA version)
-│           ├── manual_review.json        77-of-271 hand-curation manifest
-│           └── compare_20_prompts.txt    showcase-comparison prompt list
-├── data/
-│   ├── README.md                         download instructions for both datasets
-│   ├── webnlg/raw/                       [gitignored] WebNLG v3.0 corpus (~25 MB on disk)
-│   └── diffusion_lora/                   [gitignored] Bronkhorst training images
-│       ├── train/                        scraped 271 raw paintings
-│       ├── train_filtered/               77 manually-curated paintings + hand-written captions
-│       └── train_filtered_v2_captions_backup/   v2-era captions kept for reference
-├── results/
-│   ├── README.md                         result-folder layout
-│   ├── webnlg/                           primary-track reproduction outputs
-│   │   ├── lora_webnlg_v2.1_paper/       paper-exact LoRA recipe (headline result)
-│   │   ├── full_ft_v2.1_paper/           full-FT baseline run
-│   │   └── charts/                       aggregate plots
-│   └── diffusion_lora/                   extension-track grids + 22-image showcase
-│       ├── flux2_*.png                   comparison/curated grids (v1, v2, v3, 3-way)
-│       ├── showcase_full_quality/        22 hand-picked baseline-vs-LoRA pairs (full-res)
-│       └── inference_{baseline,v1,v2,v3}/   raw 20-prompt sample sets per LoRA version
-├── models/                               [gitignored] trained checkpoints (LoRA + base)
-├── poster/poster.pdf                     in-class poster
-└── report/
-    ├── report.pdf                        final report
-    └── CS4782 Project Proposal.pdf       original proposal (for reference)
+lora/
+├── code/                    Reimplementation code
+│   ├── lora_module.py         LoRA layer + GPT-2 injection (from scratch)
+│   ├── e2e/                   E2E fine-tuning notebooks (full FT + LoRA)
+│   ├── dart/                  DART fine-tuning notebooks
+│   ├── webnlg/                WebNLG notebooks + reeval scripts
+│   └── diffusion_lora/        Flux.2 9B diffusion-LoRA pipeline
+├── data/                    Dataset files / download instructions
+├── results/                 Metrics, predictions, charts, generated images
+├── report/report.pdf        Final report
+├── poster/poster.pdf        In-class poster
+├── LICENSE
+└── README.md
 ```
 
 ## 4. Re-implementation Details
 
-**Primary track — GPT-2 M + WebNLG (the paper's recipe).**
-- Base model: `gpt2-medium` (354 M params, HuggingFace).
-- Dataset: WebNLG v3.0 English (~13 K train / 1.7 K dev / 3.9 K test). Custom loader (`code/webnlg/webnlg_loader.py`) bypasses HF datasets' deprecated script-loader path and Windows MAX_PATH issues.
-- LoRA injected into `q_proj`, `v_proj` of every transformer block; rank `r=4`, alpha `α=8`. Trainable params: **0.35 M / 354 M = 0.10 %** (matches the paper's claim).
-- Training: 5 epochs, AdamW lr 2e-4, batch 8, fp16. Inference: beam search (beam=5, no-repeat-ngram=3).
-- Metrics: BLEU (sacrebleu, official paper protocol), METEOR (Java jar from cs.cmu.edu, paper protocol), ROUGE-L, NIST, CIDEr (pycocoevalcap), TER. Re-evaluation utilities in `code/webnlg/reeval_paper.py` and `code/webnlg/reeval_ter.py`.
-- Ablations: rank ∈ {2, 4, 8, 16, 32}, targets ∈ {q+v, q+k+v+o}, plus a full-FT baseline.
+**Model.** GPT-2 Medium (~355 M params), chosen to fit our compute while still being large enough to stress-test LoRA.
 
-**Extension — WB LoRA on Flux.2 Klein 9B (ai-toolkit).**
-- Base: Flux.2 Klein 9B transformer + Qwen3-8B text encoder (frozen) + Flux2 VAE (frozen). Quanto qfloat8 quantization to fit 17 GB (9B + 8B fp8) on a 24 GB 4090.
-- Dataset: scraped 271 Werner Bronkhorst paintings → manually filtered to **77 keepers** (28 % keep rate; 194 dropped for visible frames, walls, hands, watermarks, wrong-artist signatures, or duplicates). Hand-written captions, all prefixed with the trigger `wbronkhorst style, ` and with style descriptors stripped from the body.
-- LoRA on every linear in the diffusion transformer (~166 M trainable params at rank 32), AdamW8bit lr 1e-4, EMA 0.99, flowmatch scheduler, 5000 training steps over 3 versions (v1: original captions, v2: rank 64 + original captions, v3: rank 32 + style-stripped captions — chosen as the keeper).
-- Final deliverable: 22 hand-picked baseline-vs-LoRA image pairs at 1024×1024.
+**LoRA module.** Built from scratch in `code/lora_module.py` - wraps GPT-2's `Conv1D` layers and injects rank-`r` updates into the **q** and **v** projections of every attention block (matching the paper). Base weights frozen, only `lora_A` / `lora_B` parameters train.
 
-**Challenges along the way.** WebNLG: HF datasets v4 dropped script-loader support (custom loader needed); Java METEOR jar required to match paper numbers (Python METEOR scores 5-7 points lower). Flux.2: ai-toolkit's `max_step_saves_to_keep: -1` deletes every intermediate checkpoint (positive int required); ai-toolkit's standalone `GenerateProcess` hardcodes `ddpm` and produces NaN for flow-matching models (workaround: load LoRA via `pretrained_lora_path` in a `steps:1, lr:0.0` training yaml); aspect-ratio bucketing recompiles CUDA kernels (single-bucket gave 245× speedup); style words baked into captions diluted trigger-word grip (caption rewrite was the single biggest visual-quality lever).
+**Training setup.** We follow the paper's hyperparameters (Fig. 4 in our report) and the Prefix-Tuning baseline (Li & Liang, 2021) for full FT comparisons. **Key deviation:** we replaced the paper's `" || "` separator between meaning representation and target with a fresh special token `<|SEP|>` added to the tokenizer - empirically this gave noticeably better results on E2E (the paper's separator carried prior learned semantics that hurt training).
+
+**Metrics.** BLEU and METEOR across all three datasets, plus dataset-specific NIST/ROUGE-L/CIDEr (E2E) and TER (DART, WebNLG). We also recorded peak GPU memory and trainable parameter counts.
+
+**Diffusion extension.** As an out-of-scope test of LoRA's generality, we trained a 165 M-param style LoRA on Flux.2 Klein 9B (Black Forest Labs, 2025) using 77 manually-curated paintings by Werner Bronkhorst - same low-rank math, applied to attention + MLP linear layers. See `code/diffusion_lora/README.md` for the full pipeline.
+
+**Challenges.** The biggest obstacle was undocumented preprocessing in the original paper - the LoRA paper, Prefix-Tuning paper, and original dataset papers all disagreed on input formatting and some hyperparameters. Our numbers land within ~80 % of the paper's, with the same trends.
 
 ## 5. Reproduction Steps
 
-**Hardware.** Primary track: any single CUDA GPU with ≥16 GB VRAM (we used a 4090). Extension: 24 GB VRAM strictly required for Flux.2 Klein 9B + Qwen3-8B at qfloat8. Disk: ≥40 GB free for HuggingFace cache.
+### Environment
 
-**Primary track — WebNLG reproduction (~1 h on a 4090):**
-
-```bash
-pip install torch transformers datasets accelerate
-pip install sacrebleu nltk rouge-score pycocoevalcap tqdm
-python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('punkt')"
-jupyter lab code/webnlg/finetune_webnlg_lora.ipynb     # run all cells; switch ablations via the CFG cell
-```
-
-The notebook handles WebNLG download, training, generation, and metric reporting. Outputs land in `results/webnlg/lora_webnlg_v2.1_paper/`.
-
-**Extension — WB LoRA on Flux.2 (~3 h on a 4090):**
+- **Hardware:** Single GPU with ≥ 12 GB VRAM (we used RTX 4090 / Colab A100). The diffusion LoRA needs 24 GB VRAM.
+- **Python:** 3.10+
+- **Python Dependencies:** `torch`, `transformers`, `datasets`, `nltk`, `sacrebleu`, `jupyter`. The diffusion extension additionally needs `diffusers==0.30.3`, `accelerate`, `peft`, `bitsandbytes`, `Pillow`.
 
 ```bash
-cd code/diffusion_lora/flux2
-python setup_aitoolkit.py                       # one-time: clone + install ai-toolkit
-huggingface-cli login                           # gated weights for Flux.2 Klein + Qwen3
-python ai-toolkit/run.py flux2.yaml     # full v3 training (~2.5 h)
-python compare_showcase.py                      # build the curated baseline-vs-LoRA grid
+git clone https://github.com/weitaosu/lora.git lora
+cd lora
+pip install torch transformers datasets nltk sacrebleu jupyter
 ```
 
-Detailed instructions in [code/diffusion_lora/flux2/README.md](code/diffusion_lora/flux2/README.md).
+### Reproduce the GPT-2 + LoRA results
+
+Each dataset has paired notebooks for full fine-tuning and LoRA:
+
+```bash
+jupyter lab code/e2e/finetune_e2e_lora.ipynb        # or finetune_e2e_fullft.ipynb
+jupyter lab code/dart/finetune_dart_lora.ipynb      # or finetune_dart_fullft.ipynb
+jupyter lab code/webnlg/finetune_webnlg_lora.ipynb  # or finetune_webnlg_fullft.ipynb
+```
+
+Run cells top-to-bottom. Each notebook loads its dataset via the matching `*_loader.py`, injects LoRA via `code/lora_module.py`, fine-tunes GPT-2 Medium, and dumps predictions + metrics into `results/<dataset>/`.
+
+For WebNLG, re-evaluation against paper-style references uses:
+
+```bash
+python code/webnlg/reeval_paper.py
+python code/webnlg/reeval_ter.py
+```
+
+### Reproduce the diffusion LoRA
+
+See `code/diffusion_lora/README.md` for the 5-step pipeline (caption → setup → train → infer). Default config trains for 80 epochs on SD 1.5 (~1–2 h on a 12 GB GPU); the Flux.2 9B run reported in the paper takes ~3 h on a 24 GB GPU.
 
 ## 6. Results / Insights
 
-**Primary — GPT-2 M + WebNLG (paper Table 4 vs. our reproduction):**
+Across all three NLG datasets, **LoRA matches or outperforms full fine-tuning**, reproducing the paper's central trend.
 
-| Metric  | Paper LoRA (r=4, q+v) | Our reproduction | Paper Full-FT | Our Full-FT |
-|---|---|---|---|---|
-| Trainable params | 0.35 M (0.1 %) | 0.35 M | 354 M | 354 M |
-| BLEU            | 55.5 | ~47.5 | 55.5 | ~47.5 |
-| METEOR          | 0.42 | 0.39 | 0.42 | 0.39 |
-| TER ↓           | 0.40 | 0.51 | 0.40 | 0.51 |
+| Dataset | Metric | Paper FT | Paper LoRA | **Our FT** | **Our LoRA** |
+|---|---|---|---|---|---|
+| E2E    | BLEU↑    | 68.2 | 70.4 | 65.5 | **65.8** |
+| E2E    | METEOR↑  | 46.2 | 46.8 | 45.0 | **45.6** |
+| WebNLG | BLEU↑ (All)   | 46.5 | 55.3 | 41.3 | **47.5** |
+| WebNLG | METEOR↑ (All) | 0.38 | 0.41 | 0.33 | **0.39** |
+| DART   | BLEU↑    | 46.2 | 47.1 | 33.6 | **37.3** |
+| DART   | METEOR↑  | 0.39 | 0.39 | 0.31 | **0.33** |
 
-Numbers in the "Our" columns are within reproduction tolerance for our v3.0 dataset version; the paper used a slightly different split. **Key insight reproduced**: LoRA at 0.1 % trainable params **matches** full fine-tuning, matching the paper's headline efficiency claim. See `results/webnlg/lora_webnlg_v2.1_paper/metrics.json` and `results/webnlg/full_ft_v2.1_paper/metrics.json` for full per-metric tables.
+**GPU memory** dropped by ~1.4× with LoRA (vs. the paper's 3×; we attribute the gap to differences in accelerator, the paper used V100s). **Rank ablation** shows diminishing returns past `r = 4`, supporting the paper's "low rank suffices" claim.
 
-**Extension — WB LoRA on Flux.2.** The same low-rank insight transfers cleanly to a 9B diffusion transformer: rank 32 (~1.8 % of base params) produces strong, controllable style transfer that's gated by the trigger word `wbronkhorst style`. Visual headline: 22 baseline-vs-LoRA pairs in [results/diffusion_lora/showcase_full_quality/](results/diffusion_lora/showcase_full_quality/), summary grid in [results/diffusion_lora/flux2_showcase_baseline_vs_lora.png](results/diffusion_lora/flux2_showcase_baseline_vs_lora.png).
+**Diffusion extension:** the 165 M-param LoRA (≈ 1.8 % of Flux.2's 9 B params) produces strong, reliably-triggered Bronkhorst-style transfer that preserves subject fidelity across in- and out-of-distribution prompts, confirming LoRA's low-rank insight transfers cleanly from autoregressive LMs to diffusion transformers, provided the data and prompt pipeline are right.
+
+Generated charts and predictions live under `results/` (e.g. `results/webnlg/charts/webnlg_comparison.png`, `results/diffusion_lora/flux2_showcase_baseline_vs_lora.png`).
 
 ## 7. Conclusion
 
-LoRA's central claim — that a tiny low-rank adapter can match full fine-tuning at a fraction of the parameter cost — held up under our reproduction on GPT-2 M + WebNLG and **also generalized cleanly to a 9B diffusion transformer trained on a 77-image custom dataset**. The single highest-leverage decisions in both tracks were not architectural: **dataset quality** (the manual 271→77 curation pass alone made the diffusion LoRA usable) and **caption discipline** (stripping style words so the trigger token alone carried the style signal) mattered more than rank or training duration.
+Reimplementing LoRA confirmed its central claim: a tiny low-rank update can match full fine-tuning while cutting trainable parameters and GPU memory substantially. Our biggest practical lesson was that **input formatting matters more than hyperparameters** - swapping the paper's `||` separator for a dedicated special token gave the largest single quality jump, and undocumented preprocessing was the main reason our numbers lag the paper's by a small margin. Extending the technique to a 9B diffusion transformer worked first try once data quality and trigger-word discipline were right, suggesting the low-rank insight is genuinely architecture-agnostic.
 
 ## 8. References
 
-- Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2021). **LoRA: Low-Rank Adaptation of Large Language Models.** [arXiv:2106.09685](https://arxiv.org/abs/2106.09685).
-- Gardent, C., Shimorina, A., Narayan, S., & Perez-Beltrachini, L. (2017). **The WebNLG Challenge: Generating Text from RDF Data.** *INLG 2017*. Dataset at [gitlab.com/shimorina/webnlg-dataset](https://gitlab.com/shimorina/webnlg-dataset).
-- Black Forest Labs. (2025). **FLUX.2 Klein 9B.** [huggingface.co/black-forest-labs/FLUX.2-klein-base-9B](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B).
-- Ostris. **ai-toolkit** (open-source LoRA trainer for Flux/SDXL). [github.com/ostris/ai-toolkit](https://github.com/ostris/ai-toolkit).
-- Werner Bronkhorst (artist). Reference paintings used solely for academic experimentation under fair-use. [wernerbronkhorst.com](https://www.wernerbronkhorst.com/).
+- E. J. Hu et al. *LoRA: Low-Rank Adaptation of Large Language Models.* arXiv:2106.09685, 2021.
+- A. Radford et al. *Language Models are Unsupervised Multitask Learners.* OpenAI, 2019.
+- X. L. Li and P. Liang. *Prefix-Tuning: Optimizing Continuous Prompts for Generation.* arXiv:2101.00190, 2021.
+- J. Novikova, O. Dušek, V. Rieser. *The E2E Dataset: New Challenges for End-to-End Generation.* SIGDIAL 2017.
+- L. Nan et al. *DART: Open-Domain Structured Data Record to Text Generation.* arXiv:2007.02871, 2020.
+- C. Gardent et al. *The WebNLG Challenge: Generating Text from RDF Data.* INLG 2017.
+- Black Forest Labs. *Flux.2: Frontier Visual Intelligence.* https://github.com/black-forest-labs/flux2, 2025.
 
 ## 9. Acknowledgements
 
-Submitted as the CS 4782 (Deep Learning) final project, Cornell University, Spring 2026, under the instruction of the course staff. The reproduction work was peer-reviewed within our 3-person team and graded as part of the course requirements. We thank the LoRA paper authors for releasing their reference code, the WebNLG organizers for the public corpus, the Hugging Face team for the model and tokenizer ecosystem, and Ostris (ai-toolkit) for the Flux.2 training infrastructure that made the diffusion-model extension possible on a single 4090.
+This project was completed as the final project for **CS 4782: Introduction to Deep Learning** at Cornell University. We thank the course staff for guidance and feedback throughout the semester. The diffusion-LoRA extension uses the [`ai-toolkit`](https://github.com/ostris/ai-toolkit) trainer and Hugging Face's [`diffusers`](https://github.com/huggingface/diffusers) library; the GPT-2 reimplementation builds on Hugging Face [`transformers`](https://github.com/huggingface/transformers).
