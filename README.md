@@ -19,7 +19,7 @@ Plus a **rank ablation** (Fig. 6 in the paper) showing diminishing returns past 
 ## 3. GitHub Contents
 
 ```
-weitao-lora/
+lora/
 ├── code/                    Reimplementation code
 │   ├── lora_module.py         LoRA layer + GPT-2 injection (from scratch)
 │   ├── e2e/                   E2E fine-tuning notebooks (full FT + LoRA)
@@ -57,8 +57,8 @@ weitao-lora/
 - **Python Dependencies:** `torch`, `transformers`, `datasets`, `nltk`, `sacrebleu`, `jupyter`. The diffusion extension additionally needs `diffusers==0.30.3`, `accelerate`, `peft`, `bitsandbytes`, `Pillow`.
 
 ```bash
-git clone https://github.com/weitaosu/lora.git weitao-lora
-cd weitao-lora
+git clone https://github.com/weitaosu/lora.git lora
+cd lora
 pip install torch transformers datasets nltk sacrebleu jupyter
 ```
 
