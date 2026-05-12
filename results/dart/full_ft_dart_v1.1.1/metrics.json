@@ -1,0 +1,43 @@
+{
+  "mode": "full_ft",
+  "dataset": "dart_v1.1.1",
+  "BLEU": 28.548284165365228,
+  "NIST": 6.524729326146596,
+  "METEOR": 0.5705541573208776,
+  "ROUGE-L": 0.5079281723621839,
+  "CIDEr": 1.2585898934445428,
+  "efficiency": {
+    "trainable_params": 354823168,
+    "total_params": 354823168,
+    "trainable_pct": 100.0,
+    "train_time_sec": 12596.074965715408,
+    "peak_gpu_gb": 13.027982336,
+    "samples_per_sec": 24.872430566882233
+  },
+  "config": {
+    "model_name": "gpt2-medium",
+    "data_dir": "../data/raw/dart",
+    "data_version": "v1.1.1",
+    "max_length": 512,
+    "batch_size": 8,
+    "grad_accum": 1,
+    "epochs": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_eps": 1e-08,
+    "warmup_steps": 500,
+    "label_smoothing": 0.0,
+    "grad_clip_norm": null,
+    "use_fp16": true,
+    "mask_prompt": false,
+    "grad_checkpointing": false,
+    "beam_size": 10,
+    "length_penalty": 0.8,
+    "no_repeat_ngram_size": 4,
+    "max_new_tokens": 100,
+    "out_dir": "..\\results\\full_ft_dart_v1.1.1",
+    "save_full_model": false
+  }
+}
