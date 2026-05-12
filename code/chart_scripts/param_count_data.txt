@@ -1,0 +1,8 @@
+Rank,Trainable Parameters
+1,98304
+2,196608
+4,393216
+8,786432
+16,1572864
+32,3145728
+Full Baseline Model,354749440
