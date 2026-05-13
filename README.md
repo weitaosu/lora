@@ -14,7 +14,7 @@ We reproduce the **NLG results on GPT-2 Medium** from the LoRA paper (Tables 2�
 - **DART** (Nan et al., 2020) - BLEU, METEOR, TER
 - **WebNLG** (Gardent et al., 2017) - BLEU, METEOR, TER (Seen / Unseen / All)
 
-Plus a **rank ablation** (Fig. 6 in the paper) showing diminishing returns past rank 4. These results are central to the paper's claim that low-rank adaptation matches full fine-tuning at a fraction of the trainable parameters and GPU memory.
+These results are central to the paper's claim that low-rank adaptation matches full fine-tuning at a fraction of the trainable parameters and GPU memory.
 
 ## 3. GitHub Contents
 
@@ -22,9 +22,9 @@ Plus a **rank ablation** (Fig. 6 in the paper) showing diminishing returns past 
 lora/
 ├── code/                    Reimplementation code
 │   ├── lora_module.py         LoRA layer + GPT-2 injection (from scratch)
-│   ├── e2e/                   E2E fine-tuning notebooks (full FT + LoRA)
-│   ├── dart/                  DART fine-tuning notebooks
-│   ├── webnlg/                WebNLG notebooks + reeval scripts
+│   ├── e2e/                   E2E fine-tuning notebooks
+│   ├── dart/                  DART fine-tuning notebooks 
+│   ├── webnlg/                WebNLG fine-tuning notebooks
 │   └── diffusion_lora/        Flux.2 9B diffusion-LoRA pipeline
 ├── data/                    Dataset files / download instructions
 ├── results/                 Metrics, predictions, charts, generated images
@@ -38,15 +38,17 @@ lora/
 
 **Model.** GPT-2 Medium (~355 M params), chosen to fit our compute while still being large enough to stress-test LoRA.
 
-**LoRA module.** Built from scratch in `code/lora_module.py` - wraps GPT-2's `Conv1D` layers and injects rank-`r` updates into the **q** and **v** projections of every attention block (matching the paper). Base weights frozen, only `lora_A` / `lora_B` parameters train.
+**LoRA module.** Built from scratch in `code/lora_module.py`. Wraps GPT-2's `Conv1D` layers and injects rank-`r` updates into the **q** and **v** projections of every attention block (matching the paper). Base weights frozen, only `lora_A` / `lora_B` parameters train.
 
-**Training setup.** We follow the paper's hyperparameters (Fig. 4 in our report) and the Prefix-Tuning baseline (Li & Liang, 2021) for full FT comparisons. **Key deviation:** we replaced the paper's `" || "` separator between meaning representation and target with a fresh special token `<|SEP|>` added to the tokenizer - empirically this gave noticeably better results on E2E (the paper's separator carried prior learned semantics that hurt training).
+**Training setup.** We follow the paper's hyperparameters (Fig. 4 in our report) and the Prefix-Tuning baseline (Li & Liang, 2021) for full FT comparisons. 
+
+Key deviation: we replaced the paper's `" || "` separator between meaning representation and target with a fresh special token `<|SEP|>` added to the tokenizer. Empirically this gave noticeably better results on E2E (the paper's separator carried prior learned semantics that hurt training).
 
 **Metrics.** BLEU and METEOR across all three datasets, plus dataset-specific NIST/ROUGE-L/CIDEr (E2E) and TER (DART, WebNLG). We also recorded peak GPU memory and trainable parameter counts.
 
-**Diffusion extension.** As an out-of-scope test of LoRA's generality, we trained a 165 M-param style LoRA on Flux.2 Klein 9B (Black Forest Labs, 2025) using 77 manually-curated paintings by Werner Bronkhorst - same low-rank math, applied to attention + MLP linear layers. See `code/diffusion_lora/README.md` for the full pipeline.
+**Diffusion Extension.** As an out-of-scope test of LoRA's generality, we trained a 165 M-param style LoRA on Flux.2 Klein 9B (Black Forest Labs, 2025) using 77 manually-curated paintings by Werner Bronkhorst. We use the same low-rank math, applied to attention + MLP linear layers. See `code/diffusion_lora/README.md` for the full pipeline.
 
-**Challenges.** The biggest obstacle was undocumented preprocessing in the original paper - the LoRA paper, Prefix-Tuning paper, and original dataset papers all disagreed on input formatting and some hyperparameters. Our numbers land within ~80 % of the paper's, with the same trends.
+**Challenges.** The biggest obstacle was undocumented preprocessing in the original paper - the LoRA paper, Prefix-Tuning paper, and original dataset papers all disagreed on input formatting and certain hyperparameters. Considering this, our numbers land within ~80 % of the paper's, with the same trends.
 
 ## 5. Reproduction Steps
 
@@ -98,15 +100,17 @@ Across all three NLG datasets, **LoRA matches or outperforms full fine-tuning**,
 | DART   | BLEU↑    | 46.2 | 47.1 | 33.6 | **37.3** |
 | DART   | METEOR↑  | 0.39 | 0.39 | 0.31 | **0.33** |
 
-**GPU memory** dropped by ~1.4× with LoRA (vs. the paper's 3×; we attribute the gap to differences in accelerator, the paper used V100s). **Rank ablation** shows diminishing returns past `r = 4`, supporting the paper's "low rank suffices" claim.
+Other metrics have been excluded here. See `results/{dataset}/{dataset}_metric_results.png` for full comparisons
+
+**GPU memory** dropped by ~1.4× with LoRA (vs. the paper's 3×. We attribute the gap to differences in accelerator, as the paper used V100s). **Rank ablation** shows diminishing returns past `r = 4`, supporting the paper's "low rank suffices" claim.
 
 **Diffusion extension:** the 165 M-param LoRA (≈ 1.8 % of Flux.2's 9 B params) produces strong, reliably-triggered Bronkhorst-style transfer that preserves subject fidelity across in- and out-of-distribution prompts, confirming LoRA's low-rank insight transfers cleanly from autoregressive LMs to diffusion transformers, provided the data and prompt pipeline are right.
 
-Generated charts and predictions live under `results/` (e.g. `results/webnlg/charts/webnlg_comparison.png`, `results/diffusion_lora/flux2_showcase_baseline_vs_lora.png`).
+Other interesting generated charts and predictions live under `results/`. (e.g.`results/diffusion_lora/flux2_showcase_baseline_vs_lora.png`).
 
 ## 7. Conclusion
 
-Reimplementing LoRA confirmed its central claim: a tiny low-rank update can match full fine-tuning while cutting trainable parameters and GPU memory substantially. Our biggest practical lesson was that **input formatting matters more than hyperparameters** - swapping the paper's `||` separator for a dedicated special token gave the largest single quality jump, and undocumented preprocessing was the main reason our numbers lag the paper's by a small margin. Extending the technique to a 9B diffusion transformer worked first try once data quality and trigger-word discipline were right, suggesting the low-rank insight is genuinely architecture-agnostic.
+Reimplementing LoRA confirmed its central claim: a tiny low-rank update can match full fine-tuning while cutting trainable parameters and GPU memory substantially. Our biggest practical lesson was that **input formatting matters more than hyperparameters**. Swapping the paper's `||` separator for a dedicated special token gave the largest single quality jump, and undocumented preprocessing was the main reason our numbers lag the paper's by a small margin. Extending the technique to a 9B diffusion transformer worked first try once data quality and trigger-word discipline were right, suggesting the low-rank insight is genuinely architecture-agnostic.
 
 ## 8. References
 
