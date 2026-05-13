@@ -43,9 +43,7 @@ lora/
 
 **Training setup.** We follow the paper's hyperparameters (Fig. 4 in our report) and the Prefix-Tuning baseline (Li & Liang, 2021) for full FT comparisons. 
 
-Key deviation: we replaced the paper's `" || "` separator between meaning representation and target with a fresh special token `<|SEP|>` added to the tokenizer. Empirically this gave noticeably better results on E2E (the paper's separator carried prior learned semantics that hurt training).
-
-**Metrics.** BLEU and METEOR across all three datasets, plus dataset-specific NIST/ROUGE-L/CIDEr (E2E) and TER (DART, WebNLG). We also recorded peak GPU memory and trainable parameter counts.
+**Metrics.** BLEU, METEOR, NIST, ROUGE-L, CIDEr and TER, each depending on the dataset. We also record peak GPU memory and trainable parameter counts.
 
 **Diffusion Extension.** As an out-of-scope test of LoRA's generality, we trained a 165 M-param style LoRA on Flux.2 Klein 9B (Black Forest Labs, 2025) using 77 manually-curated paintings by Werner Bronkhorst. We use the same low-rank math, applied to attention + MLP linear layers. See `code/diffusion_lora/README.md` for the full pipeline.
 
@@ -90,16 +88,13 @@ See `code/diffusion_lora/README.md` for the 5-step pipeline (caption → setup �
 
 ## 6. Results / Insights
 
-Across all three NLG datasets, **LoRA matches or outperforms full fine-tuning**, reproducing the paper's central trend.
+Across all three NLG datasets, **LoRA matches or outperforms full fine-tuning**, reproducing the paper's central trend. Example using BLEU metric is shown below.
 
 | Dataset | Metric | Paper FT | Paper LoRA | **Our FT** | **Our LoRA** |
 |---|---|---|---|---|---|
 | E2E    | BLEU↑    | 68.2 | 70.4 | 65.5 | **65.8** |
-| E2E    | METEOR↑  | 46.2 | 46.8 | 45.0 | **45.6** |
 | WebNLG | BLEU↑ (All)   | 46.5 | 55.3 | 41.3 | **47.5** |
-| WebNLG | METEOR↑ (All) | 0.38 | 0.41 | 0.33 | **0.39** |
 | DART   | BLEU↑    | 46.2 | 47.1 | 33.6 | **37.3** |
-| DART   | METEOR↑  | 0.39 | 0.39 | 0.31 | **0.33** |
 
 Other metrics have been excluded here. See `results/{dataset}/{dataset}_metric_results.png` for full comparisons
 
