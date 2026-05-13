@@ -31,6 +31,7 @@ lora/
 ├── results/                       Metrics, predictions, charts, generated images
 ├── report/LoRA_2page_report.pdf   Final report
 ├── poster/poster.pdf              In-class poster
+├── requirements.txt               Python dependencies
 ├── LICENSE
 └── README.md
 ```
@@ -55,12 +56,12 @@ lora/
 
 - **Hardware:** Single GPU with ≥ 12 GB VRAM (we used RTX 4090 / Colab A100). The diffusion LoRA needs 24 GB VRAM.
 - **Python:** 3.10+
-- **Python Dependencies:** `torch`, `transformers`, `datasets`, `nltk`, `sacrebleu`, `jupyter`. The diffusion extension additionally needs `diffusers==0.30.3`, `accelerate`, `peft`, `bitsandbytes`, `Pillow`.
+- **Python Dependencies: See `requirements.txt` for list of packages. Install via:
 
 ```bash
 git clone https://github.com/weitaosu/lora.git lora
 cd lora
-pip install torch transformers datasets nltk sacrebleu jupyter
+pip install -r requirements.txt
 ```
 
 ### Reproduce the GPT-2 + LoRA results
