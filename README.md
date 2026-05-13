@@ -107,7 +107,7 @@ Other interesting generated charts and predictions live under `results/`. (e.g.`
 
 ## 7. Conclusion
 
-Reimplementing LoRA confirmed its central claim: a tiny low-rank update can match full fine-tuning while cutting trainable parameters and GPU memory substantially. Our biggest practical lesson was that **input formatting matters more than hyperparameters**. Swapping the paper's `||` separator for a dedicated special token gave the largest single quality jump, and undocumented preprocessing was the main reason our numbers lag the paper's by a small margin. Extending the technique to a 9B diffusion transformer worked first try once data quality and trigger-word discipline were right, suggesting the low-rank insight is genuinely architecture-agnostic.
+Reimplementing LoRA confirmed its central claim: a tiny low-rank update can match full fine-tuning while cutting trainable parameters and GPU memory substantially. Our biggest practical lesson was that **input formatting matters more than hyperparameters**. Swapping the paper's `||` separator for a dedicated special token gave the largest single quality jump, and undocumented preprocessing was the main reason our numbers lag the paper's by a small margin. Extending the technique to a 9B diffusion transformer worked phenomenally once data quality and trigger-word discipline were right, suggesting the low-rank insight is genuinely architecture-agnostic.
 
 ## 8. References
 
