@@ -56,7 +56,7 @@ lora/
 
 - **Hardware:** Single GPU with ≥ 12 GB VRAM (we used RTX 4090 / Colab A100). The diffusion LoRA needs 24 GB VRAM.
 - **Python:** 3.10+
-- **Python Dependencies: See `requirements.txt` for list of packages. Install via:
+- **Python Dependencies:** See `requirements.txt` for list of packages. Install via:
 
 ```bash
 git clone https://github.com/weitaosu/lora.git lora
