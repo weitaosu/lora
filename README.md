@@ -20,16 +20,17 @@ These results are central to the paper's claim that low-rank adaptation matches 
 
 ```
 lora/
-├── code/                    Reimplementation code
-│   ├── lora_module.py         LoRA layer + GPT-2 injection (from scratch)
-│   ├── e2e/                   E2E fine-tuning notebooks
-│   ├── dart/                  DART fine-tuning notebooks 
-│   ├── webnlg/                WebNLG fine-tuning notebooks
-│   └── diffusion_lora/        Flux.2 9B diffusion-LoRA pipeline
-├── data/                    Dataset files / download instructions
-├── results/                 Metrics, predictions, charts, generated images
-├── report/report.pdf        Final report
-├── poster/poster.pdf        In-class poster
+├── code/                          Reimplementation code
+│   ├── lora_module.py             LoRA layer + GPT-2 injection (from scratch)
+│   ├── e2e/                       E2E fine-tuning notebooks (full FT + LoRA)
+│   ├── dart/                      DART fine-tuning notebooks
+│   ├── webnlg/                    WebNLG fine-tuning notebooks
+│   ├── diffusion_lora/            Flux.2 9B diffusion-LoRA pipeline
+│   └── chart_scripts/             Scripts for generating plots
+├── data/                          Dataset files / download instructions
+├── results/                       Metrics, predictions, charts, generated images
+├── report/LoRA_2page_report.pdf   Final report
+├── poster/poster.pdf              In-class poster
 ├── LICENSE
 └── README.md
 ```
